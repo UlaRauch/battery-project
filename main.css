@@ -38,6 +38,7 @@ footer{
     margin-top:0;
     background-color: rgb(89,89,89);
     border: solid 1px black;
+    width: 100%;
 }
 footer > p{
     margin: 0;
