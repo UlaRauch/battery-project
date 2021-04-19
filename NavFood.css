@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(80,240,219);
+    margin: 3em;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}
+header{
+    background-color: rgb(89,89,89);
+    width: 100%;
+    height: 8vh;
+    border: solid 1px black;
+    /* this is for the stickey navbar */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* until here */
+}
+ul{
+    margin: 0;
+    font-size: 1.5em;
+    display:flex;
+    align-items: center;
+    color: rgb(80,240,219);
+}
+li{
+    list-style: none;
+    display: inline;
+    margin-right: 0.9em;
+}
+ul{
+}
+footer{
+    margin-top:0;
+    background-color: rgb(89,89,89);
+    border: solid 1px black;
+    width: 100%;
+}
+footer > p{
+    margin: 0;
+    height:8vh;
+}
+ul > li > img{
+    height:3em;
+    width: 3em;
+    float:left;
+    padding-left: 0;
+}
+@media only screen and (max-width: 600px) {
+
+    body{
+        background-color: rgb(80,240,219);
+        margin: 1em;
+        box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    }
+
+    ul{
+        margin: 0;
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+
+    h1{
+        font-size: 2em;
+        color:rgb(80,240,219);
+    }
+
+}
