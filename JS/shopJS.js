@@ -12,14 +12,11 @@ window.onload = function(){
             </article>
             <article class="bottom">
                 <h2 class="productname">PRODUKTNAME</h2>
-                <p class="price">price:</p><p>details:</p>
+                <p class="price">price:  </p>
+                <p>details: </p>
                 <button class="button">BUY ME</button>
             </article>
         </article>
-
-				`
-        order.push(this.cart);
-        console.log(order);
-
+			`
     }
 };
