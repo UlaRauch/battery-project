@@ -6,7 +6,7 @@ body{
 header{
     background-color: rgb(89,89,89);
     width: 100%;
-    height: 7.5vh;
+    height: 8vh;
     border: solid 1px black;
     /* this is for the stickey navbar */
     position: -webkit-sticky;
@@ -32,12 +32,27 @@ li{
     width: 3%;
 }
 #left2{
+    margin-top: 0.3vw;
+    width:4.5%;
+    height: 5%;
     margin-left: 1.5vw;
 }
+#shop{
+    margin-top: 0.5vw;
+    height: 4%;
+    width: 4%;
+}
+#shoppingcart{
+    margin-top: 0.5vw;
+    height: 7%;
+    width: 7%;
+    float: right;
+}
+
 li.SignShop{
     float: right;
-
 }
+
 ul{
 }
 footer{
@@ -51,8 +66,8 @@ footer > p{
     height:8vh;
 }
 a > img{
-    height:3em;
-    width: 3em;
+    height: 3em;
+    width: 4em;
     float:left;
     padding-left: 0;
 }
@@ -75,7 +90,11 @@ a > img{
     #mainp1{
         margin-top: 0.1em;
         height: 8%;
-        width: 8%;
+        width: 7%;
+    }
+    #left2{
+        width: 12%;
+        height: 10%;
     }
     h1{
         font-size: 2em;
