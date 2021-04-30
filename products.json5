@@ -1,0 +1,17 @@
+{
+  "Bosch1": {
+  "title":"Anna",
+  "price":"54.00",
+  "description":"Best you can get"
+},
+  "Bosch2": {
+    "title":"Ursula",
+    "price":"54.00",
+    "description":"a new description"
+  },
+  "Bosch3": {
+    "title":"Jessica",
+    "price":"54.00",
+    "description":"expansive"
+  }
+}

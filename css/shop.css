@@ -5,12 +5,12 @@
     border-right: solid 1px black;
     width: 100%;
     padding:1em;
+    display: table-footer-group;
 }
 main{
     margin:0;
     padding:0;
     background-color: lightgray;
-    display: flex;
     width:100%;
 }
 p{
@@ -24,7 +24,7 @@ p{
     height:50vh;
     float:left;
     border: solid 1px black;
-    margin: 1em;
+    margin: 2em 1em 1em 1em;
     text-align: center;
 }
 .bottom > p{
@@ -52,13 +52,10 @@ p{
     border-right:solid 3px black;
 }
 
-.button{
-    padding: 1em 4em;
-}
-
 .button {
     background: #2ecc71;
     color: #fff;
+    padding: 1em 4em;
 }
 
 .button:hover {
@@ -78,8 +75,13 @@ p{
 
 .product:nth-of-type(2n){
     float:right;
-    margin-top:1em;
+    margin-top:2em;
     margin-bottom:1em;
+}
+h1{
+    margin:0;
+    text-align: center;
+    font-size: 3em;
 }
 @media only screen and (max-width: 600px) {
     .product{
