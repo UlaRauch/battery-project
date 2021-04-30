@@ -85,7 +85,7 @@ h1{
 @media only screen and (max-width: 600px) {
     .product{
         width:90%;
-        margin:0.8em;
+        margin:1em;
         text-align: center;
     }
     .product:nth-of-type(2n){
