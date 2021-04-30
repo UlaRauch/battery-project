@@ -24,7 +24,7 @@ p{
     height:50vh;
     float:left;
     border: solid 1px black;
-    margin: 2em 1em 1em 1em;
+    margin: 2em 1em 1em 2em;
     text-align: center;
 }
 .bottom > p{
@@ -75,8 +75,7 @@ p{
 
 .product:nth-of-type(2n){
     float:right;
-    margin-top:2em;
-    margin-bottom:1em;
+    margin: 2em 2em 1em 1em;
 }
 h1{
     margin:0;
@@ -85,9 +84,12 @@ h1{
 }
 @media only screen and (max-width: 600px) {
     .product{
-        width:100%;
-        margin:0;
+        width:90%;
+        margin:0.8em;
         text-align: center;
+    }
+    .product:nth-of-type(2n){
+        margin:0.8em;
     }
     .button{
         padding: 0.5em 2em;
