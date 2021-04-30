@@ -1,32 +1,56 @@
 @import "fonts.css";
 
 body{
-    background-color: seagreen;
     margin: 3em;
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    background-color: rgb(89,89,89);
 }
 
 h1 {
     position: center;
     text-align:center;
-    color: rgb(89,89,89);
 }
+
+.signupclasstemp {
+    background: rgb(89,89,89);
+}/*temporäre klasse, bis background gelöst ist*/
 
 p {
-    color: rgb(89,89,89);
-    font-family: Gadugi;
     text-align: center;
 }
 
-.tab-group {
-    font-family: Gadugi;
-    text-align: center;
-    padding: 2em;
+.signupform {
+    background:rgb(89,89,89);
+    padding: 40px;
+    max-width:600px;
+    margin:40px auto;
 }
+
+
+.signupin_tab-group {
+    list-style:none;
+    margin:0 0 40px 0;
+    clear:both;
+    display:block;
+    text-decoration:none;
+    padding:15px;
+}
+
 
 textarea {
-    border:2px solid;
+    border:2px solid #a0b3b0;
     resize: vertical;
+}
+
+input, textarea {
+    font-size:22px;
+    display:block;
+    width:100%;
+    height:100%;
+    padding:5px 10px;
+    background:none;
+    border: 1px solid #a0b3b0;
+    color:white;
 }
 
 .field {
@@ -42,5 +66,6 @@ textarea {
     border-radius:0;
     padding:15px 0;
     font-size:2rem;
+
     transition:all.5s ease;
 }

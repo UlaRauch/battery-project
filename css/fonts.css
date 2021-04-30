@@ -1,6 +1,6 @@
 h1 {
     font-family: Gadugi;
-    color: lightgrey;
+    color: lightseagreen;
 }
 
 h2 {
@@ -11,4 +11,15 @@ h2 {
 p {
     font-family: Arial;
     color: lightgrey;
+}
+
+.signupin_tab-group {
+    font-family: Gadugi;
+    text-align: center;
+    position: relative;
+    padding: 2em;
+}
+
+a {
+    decoration: none;
 }
