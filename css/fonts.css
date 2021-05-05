@@ -1,16 +1,25 @@
+article{
+    background-color: rgb(89,89,89);
+}
+article:nth-of-type(2n){
+    background-color: lightgray;
+    height: 80vh;
+}
 h1 {
     font-family: Gadugi;
     color: lightseagreen;
+    background-color: rgb(89,89,89);
+
 }
 
-h2 {
+h2  {
     font-family: Gadugi;
     color: lightgrey;
 }
 
-p {
+p{
     font-family: Arial;
-    color: lightgrey;
+    color: lightgray;
 }
 
 .signupin_tab-group {
@@ -19,7 +28,24 @@ p {
     position: relative;
     padding: 2em;
 }
-
 a {
     decoration: none;
+}
+td{
+    font-family: Arial;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: rgb(80,240,185);
+        margin: 1em;
+        box-shadow: 0 0 5px 3px rgba(0,0,0,0.75);
+    }
+    h1{
+        font-size: 2em;
+        color:lightseagreen;
+    }
+    article:nth-of-type(2n){
+        height:90vh;
+    }
 }
