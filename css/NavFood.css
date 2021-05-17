@@ -44,7 +44,6 @@ li{
     float: right;
 }
 #shop{
-
     margin-top: 0.4em;
     height: 5.5%;
     width: 5.5%;
@@ -68,11 +67,11 @@ footer{
 }
 footer > p{
     margin: 0;
-    height:8vh;
+    height: 5em;
 }
 
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 600px) {
 
     body{
         background-color: rgb(80,240,185);
@@ -121,8 +120,6 @@ footer > p{
         font-size: 2em;
         color:rgb(80,240,185);
     }
-    footer{
-        height: 12vh;
-    }
+
 
 }
