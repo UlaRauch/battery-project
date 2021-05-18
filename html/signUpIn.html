@@ -10,62 +10,83 @@
 <body>
 <header>
     <ul>
-        <li><a href="main.html"><img id ="mainp1" alt="battery mascot" src="../images/Mainpicture2.jpg"></a></li>
+        <li><a href="main.html"><img id="mainp1" alt="battery mascot" src="../images/Mainpicture2.jpg"></a></li>
         <li><a href="signUpIn.html">Sign in</a>/Sign up</li>
         <li></li>
         <li></li>
     </ul>
 </header>
 <main>
-    <section class="signupclasstemp"><!-- klasse temporär, weil background für body nicht funktioniert hat-->
+    <section class="signupclasstemp">
+        <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
 
         <ul class="signupin_tab-group">
-            <li class="tab_active"><a href="#signupform">Sign Up</a></li>
-            <li class="tab_notactive"><a href="#signin">Sign In</a></li>
+            <li class="tab active"><a href="#signupform">Sign Up</a></li>
+            <li class="tab"><a href="#signinform">Sign In</a></li>
         </ul>
 
         <h1>Create your account</h1>
-        <p>If you already have an account, <a href="signIn.html">sign in here!</a></p>
-
-        <section class="signupform" id="signupform">
-            <form action="main.html">
-
-                <section class="field">
-                    <label for="first_name"></label>
-                    <input type="text" name="first_name" id="first_name" placeholder="First name" required>
-                </section>
-                <section class="field">
-                    <label for="last_name"></label>
-                    <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
-                </section>
-
-                <section id="contact">
-                    <label for="e-mail"></label>
-                    <input type="email" name="e-mail" id="e-mail" placeholder="user@example.com" required>
-                    <br>
-                    <label for="tel"></label>
-                    <input type="tel" name="tel" id="tel" value="+43" required>
-                    <br>
-                </section>
+        <p>If you already have an account, <a href="#signinform">sign in here!</a></p>
 
 
-                <section id="address">
-                    <label for="street"></label>
-                    <input type="text" name="street" id="street" placeholder="Street" required>
-                    <br>
-                    <label for="street_number"></label>
-                    <input type="text" name="street_number" id="street_number" placeholder="no." required>
-                    <br>
-                    <label for="city"></label>
-                    <input type="text" name="city" id="city" placeholder="City" required>
-                    <br>
-                    <label for="country"></label>
-                    <input type="text" name="country" id="country" placeholder="Country" required>
-                </section>
+        <section class="tab-content">
+            <section class="signupinform" id="signupform">
+                <form action="main.html">
 
-                <label for="sign_up_submit"></label>
-                <input type="submit" class="submitbutton" id="sign_up_submit" value="I want to sign up now" onclick="">
-            </form>
+                    <section class="field">
+                        <label for="first_name"></label>
+                        <input type="text" name="first_name" id="first_name" placeholder="First name" required>
+                    </section>
+                    <section class="field">
+                        <label for="last_name"></label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
+                    </section>
+
+                    <section id="contact">
+                        <label for="e-mail"></label>
+                        <input type="email" name="e-mail" id="e-mail" placeholder="user@example.com" required>
+                        <br>
+                        <label for="tel"></label>
+                        <input type="tel" name="tel" id="tel" value="+43" required>
+                        <br>
+                    </section>
+
+
+                    <section id="address">
+                        <label for="street"></label>
+                        <input type="text" name="street" id="street" placeholder="Street" required>
+                        <br>
+                        <label for="street_number"></label>
+                        <input type="text" name="street_number" id="street_number" placeholder="no." required>
+                        <br>
+                        <label for="city"></label>
+                        <input type="text" name="city" id="city" placeholder="City" required>
+                        <br>
+                        <label for="country"></label>
+                        <input type="text" name="country" id="country" placeholder="Country" required>
+                    </section>
+
+                    <label for="sign_up_submit"></label>
+                    <input type="submit" class="submitbutton" id="sign_up_submit" value="I want to sign up now"
+                           onclick="">
+                </form>
+            </section>
+
+            <section class="signupinform" id="signinform">
+                <form action="main.html">
+                    <section class="field">
+                        <label for="e-mail"></label>
+                        <input type="text" name="e-mail" id="e-mail" placeholder="your@email.com" required>
+                    </section>
+                    <section class="field">
+                        <label for="password"></label>
+                        <input type="text" name="password" id="password" placeholder="password" required>
+                    </section>
+                    <label for="login_submit"></label>
+                    <input type="submit" class="submitbutton" id="login_submit" value="Login"
+                           onclick="">
+                </form>
+            </section>
         </section>
     </section>
 </main>
