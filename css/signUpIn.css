@@ -37,11 +37,11 @@ p {
     padding:15px;
 }
 
-
+/*
 .tab-content > section:last-child {
     display:none;
 }
-
+*/
 
 textarea {
     border:2px solid #a0b3b0;
