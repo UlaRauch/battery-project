@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="../css/shoppingcart.css">
-  <link rel="stylesheet" href="../css/NavFood.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../css/shoppingcart.css">
+    <link rel="stylesheet" href="../css/NavFood.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
-  <ul>
-    <li><a href="main.html"><img id = "mainp1" alt="battery mascot" src="../images/Mainpicture2.jpg"></a></li>
-    <li><a href="shop.html"><img id="shop" alt="Shop icon" src="../images/Shop.jpg" ></a></li>
-    <li><a href="signUpIn.html"><img id="sign" alt="SignIn icon " src="../images/SignIn.jpg"></a></li>
-
-
-    <li></li>
-    <li></li>
-  </ul>
+    <ul>
+        <li><a href="main.html"><img id="mainp1" alt="battery mascot" src="../images/Mainpicture2.jpg"></a></li>
+        <li><a href="shoppingcart.html"><img id="shoppingcart" alt="shoppingcart icon" src="../images/ShoppingCart.jpg"></a></li>
+        <li><a href="shop.html"><img id="shop" alt="Shop icon" src="../images/Shop.jpg"></a></li>
+        <li><a href="signUpIn.html"><img id="sign" alt="SignIn icon " src="../images/SignIn.jpg"></a></li>
+        <li></li>
+        <li></li>
+    </ul>
 </header>
 
 <main>
 
-  <section id="productsInCart">
+    <section id="productsInCart">
 
-    <article>
-      <h1>Shopping Cart</h1>
-    </article>
+        <article>
+            <h1>Shopping Cart</h1>
+        </article>
 
-  <article>
-    <h2>Your items</h2>
-  </article>
+        <table id="cartTable">
+            <tr>
+                <th width="5%">Number</th>
+                <th width="60%">Product Name</th>
+                <th width="7%">Quantity</th>
+                <th width="10%">Price Details</th>
+                <th width="10%">Total</th>
+                <th width="8%">Remove Item</th>
+            </tr>
+            <tr>
+                <th width="5%">1</th>
+                <td width="60%">Duracell AAA Alkaline Batteries 20 Pack</td>
+                <td width="7%">2</td>
+                <td width="13%">12.99</td>
+                <td width="10%">25.98</td>
+                <td width="8%">x</td>
+            </tr>
 
-    <table style="width:100%; border: 1px solid black">
-    <tr>
-      <th width="30%">Product Name</th>
-      <th width="10%">Quantity</th>
-      <th width="13%">Price Details</th>
-      <th width="10%">Total</th>
-      <th width="17%">Remove Item</th>
-    </tr>
-    </table>
+            <tr>
+                <th width="5%">2</th>
+                <td width="60%">IPhone Charger 3ft</td>
+                <td width="7%">1</td>
+                <td width="13%">9.99</td>
+                <td width="10%">9.99</td>
+                <td width="8%">x</td>
+            </tr>
 
+            <tr>
+                <th width="5%">3</th>
+                <td width="60%">Watch Batteries 1.5V 10 Pack </td>
+                <td width="7%">1</td>
+                <td width="13%">5.99</td>
+                <td width="10%">5.99</td>
+                <td width="8%">x</td>
+            </tr>
+        </table>
 
-  </section>
+        <article id = cartTotal>
+            <p id = "yourTotal">Your Total: 41.96</p>
+         </article>
+
+        <button id = "orderButton">Order Now</button>
+
+    </section>
 
 </main>
-
-<aside>
-  <h2>Shopping Cart</h2>
-  <p>Updated Sum</p>
-</aside>
 
 </body>
 </html>

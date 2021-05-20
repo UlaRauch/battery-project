@@ -1,13 +1,12 @@
 article{
     background-color: rgb(89,89,89);
-    height: 100vh;
+    height: 100%;
     border-left: solid 1px black;
     border-right: solid 1px black;
     width: 100%;
 }
-article:nth-of-type(2){
-    background-color: lightgray;
-}
+
+
 h1{
     margin:0;
     padding: 0.5em;
@@ -16,3 +15,64 @@ h1{
     background-color: rgb(89,89,89);
     color:rgb(80,240,219);
 }
+
+h2{
+    margin:10px;
+}
+
+.img{
+    object-fit: cover;
+    height:100%;
+    width: 100%;
+    border-bottom: solid 3px black;
+    border-right:solid 3px black;
+}
+
+#cartTable {
+    width: 70%;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+th, td {
+    padding: 10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+}
+
+#cartTotal {
+    position: fixed;
+    background-color: gray;
+    width: 20%;
+    padding: 20px;
+    margin: 45px;
+    right: 0px;
+    top: 250px;
+    height: 40px;
+    border: 5px black solid;
+}
+
+#yourTotal {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#orderButton {
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 600px;
+    background-color: #E0B0FF;
+    color: black;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
