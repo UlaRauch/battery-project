@@ -1,5 +1,4 @@
 #productShop{
-    background-color: lightgray;
     height: 100%;
     width: 97%;
     padding: 1em;
@@ -11,7 +10,6 @@
 main{
     margin:0;
     padding:0;
-    background-color: lightgray;
     width:100%;
 }
 p{
