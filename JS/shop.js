@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             h2.innerText = Product.ProductName;
             h2.className = "productname";
             let p = document.createElement("p");
-            p.innerText = "Price: " + Product.ProductPrice;
+            p.innerText = "Price: " + Product.ProductPrice + "€";
 
             let p2 = document.createElement("p");
             p2.innerText = Product.ProductDescription;
@@ -42,7 +42,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
             button.addEventListener(
                 'click',
                 function(){
-
+                    localStorage.clear();
+                    console.log("Hallo");
+                    let x = [];
+                    localStorage.setItem(Product.ProductName, JSON.stringify(Product));
+                    //console.log(localStorage.getItem(Product.ProductName));
+                    //localStorage.clear();
+                    let test = localStorage.getItem(Product.ProductName);
+                    test.items = JSON.parse(test.items);
+                    console.log(test.items.ProductName);
                 },
                 false
             );
@@ -63,11 +71,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     const shop = new Shop();
     let ProductArray = [];
-    ProductArray[0] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5);
-    ProductArray[1] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5);
-    ProductArray[2] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5);
-    ProductArray[3] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5);
-    ProductArray[4] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5);
+    ProductArray[0] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5, 5);
+    ProductArray[1] = new Product("Batterie2",123,"../images/batterie1.jpg", 123, 5, 5);
+    ProductArray[2] = new Product("Batterie3",123,"../images/batterie1.jpg", 123, 5, 5);
+    ProductArray[3] = new Product("Batterie4",123,"../images/batterie1.jpg", 123, 5, 5);
+    ProductArray[4] = new Product("Batterie5",123,"../images/batterie1.jpg", 123, 5, 5);
 
     shop.addProductToScreen(ProductArray[0]);
     shop.addProductToScreen(ProductArray[1]);
