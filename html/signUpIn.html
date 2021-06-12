@@ -23,12 +23,12 @@
         <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
 
         <ul class="signupin_tab-group">
-            <li><button class="tab active">Sign Up</button></li>
-            <li><button class="tab">Sign In</button></li>
+            <li><a id=goToSignUp" class="tab active">Sign Up</a></li>
+            <li><a id="goToSignIn" class="tab">Sign In</a></li>
         </ul>
 
         <h1>Create your account</h1>
-        <p>If you already have an account, <a href="#signinform">sign in here!</a></p>
+        <p>If you already have an account, <button id="signInHere">sign in here!</button></p>
 
 
         <section class="tab-content">
@@ -74,7 +74,7 @@
                 </form>
             </section>
 
-            <section class="signupinform" id="signinform">
+            <section class="signupinform" id="signinform" style="display: none"><!--TODO: style in css -->
                 <form action="main.html">
                     <section class="field">
                         <label for="e-mail"></label>

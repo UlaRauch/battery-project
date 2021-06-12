@@ -1,4 +1,4 @@
-function openSignUpInForm(evt, signInMode) {
+function openSignUpInForm(tab_id, tabcontent_id) {
     var i, tabcontent, tablinks;
 
     //anpassen, index von W3schools übernommen aber macht für 2 tabs wenig sinn
@@ -7,16 +7,15 @@ function openSignUpInForm(evt, signInMode) {
         tabcontent[i].style.display = "none";
     }
 
-    tablinks = document.getElementsByClassName("signupin_tab-group");
+    document.getElementById(tabcontent_id).style.display = "block";
+
+
+    tablinks = document.getElementsByClassName("tab");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace("active", "");
+        tablinks[i].className = tablinks[i].className = 'tab';
     }
-
-    document.getElementById(signInMode).style.display = "block";
-    evt.currentTarget.className += " active";
+    document.getElementById(tab_id).className = 'tab active';
 }
-
-
 
 /*
 //code von https://www.templatemonster.com/blog/html5-css3-registration-forms/

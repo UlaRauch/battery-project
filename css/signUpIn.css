@@ -24,22 +24,22 @@ p {
     margin:40px auto;
 }
 
-
 .signupin_tab-group {
     list-style:none;
     margin:0 0 40px 0;
     clear:both;
-    display:block;
     text-decoration:none;
     padding:15px;
+    border:0;
+    outline:none;
+    border-radius:0;
 }
 
 /*
-.tab-content > section:last-child {
-    display:none;
+section.tab-content.hide {
+    display: none;
 }
 */
-
 textarea {
     border:2px solid #a0b3b0;
     resize: vertical;
