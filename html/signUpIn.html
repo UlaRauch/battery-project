@@ -5,16 +5,17 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="../css/signUpIn.css">
     <link rel="stylesheet" href="../css/NavFood.css">
+    <link rel="stylesheet" href="../css/fonts.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="../JS/signUpIn.js"></script>
 </head>
 <body>
 <header>
     <ul>
-        <li><a href="main.html"><img id="mainp1" alt="battery mascot" src="../images/Mainpicture2.jpg"></a></li>
-        <li><a href="signUpIn.html">Sign in</a>/Sign up</li>
-        <li></li>
-        <li></li>
+        <li><a href="main.html"><img id = "mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
+        <li><a href="shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon" src="../images/ShoppingCart2.jpg"></a></li>
+        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg" ></a></li>
+        <li><a href="signUpIn.html"><img id="signIcon" alt="SignIn Icon " src="../images/SignIn2.jpg"></a></li>
     </ul>
 </header>
 <main>
@@ -22,12 +23,12 @@
         <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
 
         <ul class="signupin_tab-group">
-            <li><button class="tab active">Sign Up</button></li>
-            <li><button class="tab">Sign In</button></li>
+            <li><a id=goToSignUp" class="tab active">Sign Up</a></li>
+            <li><a id="goToSignIn" class="tab">Sign In</a></li>
         </ul>
 
         <h1>Create your account</h1>
-        <p>If you already have an account, <a href="#signinform">sign in here!</a></p>
+        <p>If you already have an account, <button id="signInHere">sign in here!</button></p>
 
 
         <section class="tab-content">
@@ -73,7 +74,7 @@
                 </form>
             </section>
 
-            <section class="signupinform" id="signinform">
+            <section class="signupinform" id="signinform" style="display: none"><!--TODO: style in css -->
                 <form action="main.html">
                     <section class="field">
                         <label for="e-mail"></label>
@@ -93,7 +94,10 @@
 </main>
 
 <footer>
-    <p>footer</p>
+    <p>Impressum: Da steht was <br>
+        Kontakt: Adresse <br>
+        Jobs(optional)<br>
+        <a href="feedback.html">Feedback</a></p>
 </footer>
 </body>
 </html>
