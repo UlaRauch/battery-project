@@ -71,58 +71,60 @@ footer > p{
     height: 5em;
 }
 
-
-@media screen and (max-width: 768px) {
-    #mainp1{
+@media screen and (max-width: 1030px) {
+    #mainIcon{
         margin-left: 1em;
         margin-top: 0.1em;
         width: 9.5%;
     }
-    #teamp{
+    #teamIcon{
         margin-left: 0.4em;
-        width: 15%;
+        margin-top: 0.3em;
+        width: 10%;
         float: left;
     }
-    #sign{
+    #signIcon{
 
-        width: 15%;
+        width: 10.5%;
         float: right;
     }
-    #shop{
-        height: 15%;
-        width: 15%;
+    #shopIcon{
+        width: 11.5%;
+        margin-top: 0.3em;
     }
-    #shoppingcart{
+    #shoppingcartIcon{
         margin-right: 1.5em;
-        height: 12%;
+        margin-top: 0.1em;
         width: 12%;
     }
 
 }
 
+@media screen and (max-width: 600px) {
 
+
+}
 @media screen and (max-width: 320px) {
 
-    #mainp1{
-        margin-left: 1em;
-        margin-top: 0.2em;
+    #mainIcon{
         margin-bottom: 0.3em;
-        width: 9%;
+        width: 13%;
     }
-    #teamp{
+    #teamIcon{
         margin-top: 0.2em;
-        width: 15%;
+        margin-left: 0.2em;
+        width: 14%;
         float: left;
     }
-    #sign{
+    #signIcon{
         margin-top: 0;
         width: 13%;
     }
-    #shop{
+    #shopIcon{
         margin-top: 0.1em;
         width: 17%;
     }
-    #shoppingcart{
+    #shoppingcartIcon{
         margin-top: 0.2em;
         margin-right: 1em;
         width: 15%;
