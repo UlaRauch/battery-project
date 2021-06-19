@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById(goToSignIn).appendChild(tabButtonSignIn);
     let buttonTextSignIn = document.createTextNode("Sign In");
     tabButtonSignIn.appendChild(buttonTextSignIn);
-    tabButtonSignIn.addEventListener("click", function () {openSignUpInForm(goToSignIn, signinform)})
+    tabButtonSignIn.addEventListener("click", function () {openSignUpInForm("goToSignIn", "signinform")})
 
     //create goToSignUp button
     let tabButtonSignUp = document.createElement("button");
     document.getElementById(goToSignUp).appendChild(tabButtonSignUp);
     let buttonTextSignUp = document.createTextNode("Sign Up");
     tabButtonSignUp.appendChild(buttonTextSignUp);
-    tabButtonSignUp.addEventListener("click", function () {openSignUpInForm(goToSignUp, signupform)});
+    tabButtonSignUp.addEventListener("click", function () {openSignUpInForm("goToSignUp", "signupform")});
 
     /*
     tutorial: https://rudrastyh.com/javascript/tabs.html
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         let tabcontent; //x
         let tablinks;
 
-        //anpassen, index von W3schools übernommen aber macht für 2 tabs wenig sinn
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = 'none';
