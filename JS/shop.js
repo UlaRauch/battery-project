@@ -14,7 +14,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
     class Shop {
         constructor() {
             //this.shoppingCart = new ShoppingCart("Shopping Cart");
-            //this.productShop = document.getElementById("productShop");
+            this.productShop = document.getElementById("productShop");
+            const maxProductsPerPage = 20;
+            let productID = 1;
+
+            let loadNewProduct = function(loadProductId){
+                fetch("http://localhost:1337/api/v1/products/"+loadProductId)
+                    .then(function (res){
+                        res.json()
+                            .then(function(json){
+                                ProductArray.push(json);
+                                shop.addProductToScreen(json);
+                                console.log(json);
+                            })
+                    })
+            }
+            loadNewProduct(productID);
+            productID++;
+            loadNewProduct(productID);
+            productID++;
+            loadNewProduct(productID);
+            productID++;
+            loadNewProduct(productID);
+            productID++;
+
+            window.addEventListener('scroll', function(){
+                if(window.scrollY >= document.getElementById("productShop").clientHeight - window.innerHeight -10 && productID <= maxProductsPerPage){
+                    loadNewProduct(productID);
+                    productID++;
+                    console.log(productID);
+                }
+            });
+
         }
         addProductToScreen(Product) {
             let productShop = document.getElementById("productShop");
@@ -46,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     console.log("Hallo");
                     let x = [];
                     localStorage.setItem(Product.ProductName, JSON.stringify(Product));
+                    localStorage.setItem(Product.ProductName, Product.ProductID);
                     //console.log(localStorage.getItem(Product.ProductName));
                     //localStorage.clear();
                     let test = localStorage.getItem(Product.ProductName);
@@ -71,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     const shop = new Shop();
     let ProductArray = [];
+    /*
     ProductArray[0] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5, 5);
     ProductArray[1] = new Product("Batterie2",123,"../images/batterie1.jpg", 123, 5, 5);
     ProductArray[2] = new Product("Batterie3",123,"../images/batterie1.jpg", 123, 5, 5);
@@ -82,6 +115,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     shop.addProductToScreen(ProductArray[2]);
     shop.addProductToScreen(ProductArray[3]);
     shop.addProductToScreen(ProductArray[4]);
+
+     */
 
 
 });
