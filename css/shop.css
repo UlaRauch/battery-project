@@ -89,6 +89,12 @@ h1{
         width: 100%;
         margin: 2em 1em 1em 1em;
     }
+    .bottom p{
+        font-size: 2em;
+    }
+    .bottom h2{
+        font-size: 2.5em;
+    }
 
 }
 

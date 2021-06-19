@@ -70,14 +70,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
             button.className = "button";
             button.innerText ="BUY ME";
 
+            let select = document.createElement("select");
+            let option1 = document.createElement("option");
+            option1.text = "1";
+            let option2 = document.createElement("option");
+            option2.text = "2";
+            let option3 = document.createElement("option");
+            option3.text = "3";
+            let option4 = document.createElement("option");
+            option4.text ="4";
+            let option5 = document.createElement("option");
+            option5.text = "5";
+            select.append(option1,option2,option3,option4,option5);
+
             button.addEventListener(
                 'click',
                 function(){
+                    Product.ProductStockQuantity += Number(select.options[select.selectedIndex].value);
                     localStorage.clear();
                     console.log("Hallo");
                     let x = [];
                     localStorage.setItem(Product.ProductName, JSON.stringify(Product));
-                    localStorage.setItem(Product.ProductName, Product.ProductID);
+                    localStorage.setItem(Product.ProductID,select.options[select.selectedIndex].value);
                     //console.log(localStorage.getItem(Product.ProductName));
                     //localStorage.clear();
                     let test = localStorage.getItem(Product.ProductName);
@@ -95,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             article3.append(p);
             article3.append(p2);
             article3.append(button);
+            article3.append(select);
             productShop.append(article);
 
         }
