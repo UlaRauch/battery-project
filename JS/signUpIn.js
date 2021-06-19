@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     tabButtonSignUp.appendChild(buttonTextSignUp);
     tabButtonSignUp.addEventListener("click", function () {openSignUpInForm("goToSignUp", "signupform")});
 
-    /*
-    tutorial: https://rudrastyh.com/javascript/tabs.html
-     */
+    //tutorial: https://rudrastyh.com/javascript/tabs.html
     function openSignUpInForm(tab_id, tabcontent_id) {
 
         let i;
