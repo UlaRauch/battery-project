@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             image.src = Product.ProductCover;
             image.className = "imagetop";
             let article3 = document.createElement("article");
+            article3.id ="ProductInformation";
             article.className = "bottom";
             let h2 = document.createElement("h2");
             h2.innerText = Product.ProductName;
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let p2 = document.createElement("p");
             p2.innerText = Product.ProductDescription;
             p2.className = "price";
+            p2.id = "description";
             let button = document.createElement("button");
             button.className = "button";
             button.innerText ="BUY ME";
@@ -82,6 +84,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let option5 = document.createElement("option");
             option5.text = "5";
             select.append(option1,option2,option3,option4,option5);
+
+            let article4 = document.createElement("article");
+            article4.id = "PriceAndButton";
 
             button.addEventListener(
                 'click',
@@ -112,12 +117,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
             article.append(article2)
             article2.append(image);
             article.append(article3);
+
             article3.append(h2);
+
+
+            //article3.append(p2);
+            p.append(button);
+            // old
+            /*
             article3.append(p);
-            article3.append(p2);
             article3.append(button);
             article3.append(select);
+
+             */
+            //New
+            article4.append(p);
+            article4.append(button);
+            article4.append(select);
+
+            article3.append(article4);
+            article.append(p2);
             productShop.append(article);
+
 
         }
 
