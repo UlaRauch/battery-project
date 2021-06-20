@@ -12,9 +12,10 @@
 <body>
 <header>
     <ul>
-        <li><a href="main.html"><img id = "mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
-        <li><a href="shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon" src="../images/ShoppingCart2.jpg"></a></li>
-        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg" ></a></li>
+        <li><a href="main.html"><img id="mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
+        <li><a href="shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon"
+                                             src="../images/ShoppingCart2.jpg"></a></li>
+        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg"></a></li>
         <li><a href="signUpIn.html"><img id="signIcon" alt="SignIn Icon " src="../images/SignIn2.jpg"></a></li>
     </ul>
 </header>
@@ -24,13 +25,11 @@
 
         <!-- links oder buttons? aktuell: buttons mit javascript dom -->
         <ul class="signupin_tab-group">
-            <li><a id=goToSignUp" class="tab active"></a></li>
-            <li><a id="goToSignIn" class="tab"></a></li>
+            <li><a href="#" id="goToSignUp" class="tab active">Sign Up</a></li>
+            <li><a href="#" id="goToSignIn" class="tab">Sign In</a></li>
         </ul>
 
         <h1>Create your account</h1>
-        <p>If you already have an account, <button id="signInHere">sign in here!</button></p>
-
 
         <section class="tab-content">
             <section class="signupinform" id="signupform">
@@ -85,6 +84,9 @@
                         <label for="password"></label>
                         <input type="text" name="password" id="password" placeholder="password" required>
                     </section>
+                    <p>Forgot your password?
+                        <button id="buttonForgotPassword">Click!</button>
+                    </p>
                     <label for="login_submit"></label>
                     <input type="submit" class="submitbutton" id="login_submit" value="Login"
                            onclick="">
