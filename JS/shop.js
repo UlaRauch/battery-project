@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let p2 = document.createElement("p");
             p2.innerText = Product.ProductDescription;
             p2.className = "price";
+            p2.id = "description";
             let button = document.createElement("button");
             button.className = "button";
             button.innerText ="BUY ME";
@@ -116,7 +117,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             article.append(article2)
             article2.append(image);
             article.append(article3);
+
             article3.append(h2);
+
 
             //article3.append(p2);
             p.append(button);
@@ -131,9 +134,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             article4.append(p);
             article4.append(button);
             article4.append(select);
-            article3.append(article4);
 
+            article3.append(article4);
+            article.append(p2);
             productShop.append(article);
+
 
         }
 
