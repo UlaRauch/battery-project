@@ -54,6 +54,9 @@ h1{
     padding: 0.5em;
     text-align: center;
     font-size: 3em;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+
 }
 h2{
     margin:0;
@@ -137,6 +140,12 @@ article a:hover {
 
 }
 @media screen and (max-width: 780px) {
+  article{
+      height: 44em;
+
+  }
+}
+@media screen and (max-width: 540px) {
     #teamArticle{
         height: 46em;
     }
@@ -146,10 +155,11 @@ article a:hover {
         font-size: medium;
         padding-right: 0.5em;
     }
-
-
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 414px) {
+    #mainp2{
+        padding-top: 9%;
+    }
     #teamArticle{
         height: 56em;
     }
@@ -173,9 +183,18 @@ article a:hover {
         margin-top: 22%;
     }
 }
+
+@media screen and (max-width: 375px) {
+    #mainp2{
+        padding-top: 10%;
+    }
+}
+
 @media screen and (max-width: 320px) {
 
-
+    #mainp2{
+        padding-top: 10%;
+    }
     #Ula{
         margin-top: 31%;
         margin-left: 0.5em;
