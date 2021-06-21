@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             .then(function(json){
                                 ProductArray.push(json);
                                 shop.addProductToScreen(json);
-                                console.log(json);
+                                //console.log(json);
                             })
                     })
             }
@@ -42,10 +42,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 if(window.scrollY >= document.getElementById("productShop").clientHeight - window.innerHeight -10 && productID <= maxProductsPerPage){
                     loadNewProduct(productID);
                     productID++;
-                    console.log(productID);
+                    //console.log(productID);
                 }
             });
-
         }
         addProductToScreen(Product) {
             let productShop = document.getElementById("productShop");
@@ -93,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 function(){
                     Product.ProductStockQuantity += Number(select.options[select.selectedIndex].value);
                     //localStorage.clear();
-                    console.log("Hallo");
+                    //console.log("Hallo");
                     let x = [];
                     //localStorage.setItem(Product.ProductName, JSON.stringify(Product));
                     localStorage.setItem(Product.ProductID,select.options[select.selectedIndex].value);
@@ -106,9 +105,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     var arrayOfValues = Object.values(localStorage);
 
                     for (var i = 0; i < arrayOfKeys.length; i++){
+                        fetch("http://localhost:1337/api/v1/products/"+arrayOfKeys[i])
+                            .then(function (res){
+                                res.json()
+                                    .then(function(json){
+                                        let id = arrayOfKeys[i];
+                                        //let number = localStorage[id];
+                                        console.log(json.ProductPrice + "quantity +1: ");
+                                        console.log(localStorage[id]);
+                                    })
+                            })
+
+
                         console.log(arrayOfKeys[i]);
                         console.log(arrayOfValues[i]);
                     }
+
+
+                    /*
+                    for (var i = 0; i < arrayOfKeys.length; i++){
+                        console.log(arrayOfKeys[i]);
+                        console.log(arrayOfValues[i]);
+                    }
+
+                     */
                 },
                 false
             );
