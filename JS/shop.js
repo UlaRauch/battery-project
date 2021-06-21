@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             .then(function(json){
                                 ProductArray.push(json);
                                 shop.addProductToScreen(json);
-                                //console.log(json);
+                                console.log(json);
                             })
                     })
             }
@@ -42,9 +42,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 if(window.scrollY >= document.getElementById("productShop").clientHeight - window.innerHeight -10 && productID <= maxProductsPerPage){
                     loadNewProduct(productID);
                     productID++;
-                    //console.log(productID);
+                    console.log(productID);
                 }
             });
+
         }
         addProductToScreen(Product) {
             let productShop = document.getElementById("productShop");
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 function(){
                     Product.ProductStockQuantity += Number(select.options[select.selectedIndex].value);
                     //localStorage.clear();
-                    //console.log("Hallo");
+                    console.log("Hallo");
                     let x = [];
                     //localStorage.setItem(Product.ProductName, JSON.stringify(Product));
                     localStorage.setItem(Product.ProductID,select.options[select.selectedIndex].value);
