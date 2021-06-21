@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                                         console.log(localStorage[id]);
                                     })
                             })
-
+                        //test
 
                         console.log(arrayOfKeys[i]);
                         console.log(arrayOfValues[i]);
