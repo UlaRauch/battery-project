@@ -27,33 +27,37 @@ li{
     margin-right: 0.9em;
 }
 #mainIcon{
-    margin-top: 0.3em;
-    margin-left: 1em;
+    margin: 0;
+    padding-top: 0.3em;
+    padding-left: 1em;
     height: 3%;
     width: 3%;
     float: left;
 }
 #teamIcon{
-    margin-top: 0.2em;
-    margin-left: 0.4em;
+    margin: 0;
+    padding-top: 0.1em;
+    padding-left: 0.4em;
     width: 3.5%;
     float: left;
 }
 #signIcon{
-    margin-top: 0.25em;
-    margin-right: 0.3em;
+    margin: 0;
+    padding-top: 0.25em;
+    padding-right: 0.3em;
     width: 3.7%;
     float: right;
 }
 #shopIcon{
-    margin-top: 0.4em;
-    margin-right: 0.3em;
+    margin: 0;
+    padding-top: 0.4em;
+    padding-right: 0.3em;
     width: 4%;
     float: right;
 }
 #shoppingcartIcon{
-    margin-top: 0.7em;
-    margin-right: 1em;
+    padding-top: 0.7em;
+    padding-right: 1em;
     width: 4%;
     float: right;
 
@@ -61,7 +65,7 @@ li{
 
 
 footer{
-    margin-top:0;
+    padding-top:0;
     background-color: #aacfe2;
     border: solid 1px black;
     width: 100%;
