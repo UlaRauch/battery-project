@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             h2.innerText = Product.ProductName;
             h2.className = "productname";
             let p = document.createElement("p");
-            p.innerText = "Price: " + Product.ProductPrice + "€";
+            p.innerText = "Price: " + Product.ProductPrice.toFixed(2) + "€";
 
             let p2 = document.createElement("p");
             p2.innerText = Product.ProductDescription;

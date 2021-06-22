@@ -53,3 +53,8 @@ td{
 
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 1.5em;
+    }
+}
