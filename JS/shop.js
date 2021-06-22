@@ -93,10 +93,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 function(){
                     Product.ProductStockQuantity += Number(select.options[select.selectedIndex].value);
                     //localStorage.clear();
-                    console.log("Hallo");
-                    let x = [];
-                    //localStorage.setItem(Product.ProductName, JSON.stringify(Product));
-                    localStorage.setItem(Product.ProductID,select.options[select.selectedIndex].value);
+                    if(localStorage.getItem(Product.ProductID)){
+                        let valueOfSelect = select.options[select.selectedIndex].value;
+                        valueOfSelect = parseInt(valueOfSelect);
+                        let ValueOfLocalstorage = localStorage.getItem(Product.ProductID);
+                        ValueOfLocalstorage = parseInt(ValueOfLocalstorage);
+                        valueOfSelect = valueOfSelect + ValueOfLocalstorage;
+                        localStorage.setItem(Product.ProductID,valueOfSelect);
+                    }else{
+                        localStorage.setItem(Product.ProductID,select.options[select.selectedIndex].value);
+                    }
+
                     //console.log(localStorage.getItem(Product.ProductName));
                     //localStorage.clear();
                     //let test = localStorage.getItem(Product.ProductName);
