@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             tableRow.id = product.ProductID;
             let tableData1 = document.createElement("td");
             tableData1.innerText = "" + productNumber;
+            tableData1.className = "notVisible";
 
             let tableData2 = document.createElement("td");
             tableData2.innerText = product.ProductName;
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             let tableData4 = document.createElement("td");
             tableData4.innerText = product.ProductPrice;
+            tableData4.className = "notVisible";
 
             //total price
             let tableData5 = document.createElement("td");
