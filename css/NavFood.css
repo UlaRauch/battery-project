@@ -70,9 +70,9 @@ footer{
     border: solid 1px black;
     width: 100%;
 }
-footer > p{
+footer > p {
     margin: 0;
-    height: 5em;
+    height: 3.5em;
 }
 
 @media screen and (max-width: 1030px) {

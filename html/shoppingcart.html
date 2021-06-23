@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="../JS/shoppingCart.js"></script>
-    <script defer src="../JS/weatherApi.js"></script>
-
 
 </head>
 <body>
 <header>
     <ul>
-        <li><a href="main.html"><img id="mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
-        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg"></a></li>
+        <li><a href="main.html"><img id = "mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
+        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg" ></a></li>
         <li><a href="signUpIn.html"><img id="signIcon" alt="SignIn Icon " src="../images/SignIn2.jpg"></a></li>
     </ul>
 </header>
@@ -28,55 +26,32 @@
             <h1>Shopping Cart</h1>
 
 
-            <table id="cartTable">
-                <tr>
-                    <th width="5%">Number</th>
-                    <th width="60%">Product Name</th>
-                    <th width="7%">Quantity</th>
-                    <th width="10%">Price Details</th>
-                    <th width="10%">Total</th>
-                    <th width="8%">Remove Item</th>
-                </tr>
+        <table id="cartTable">
+            <tr>
+                <th id="firstCol">Number</th>
+                <th id="secondCol">Product Name</th>
+                <th id="thirdCol">Quantity</th>
+                <th id="fourthCol">Price Details</th>
+                <th id="fifthCol">Total</th>
+                <th id="sixthCol">Remove Item</th>
+            </tr>
 
-            </table>
+        </table>
         </article>
 
+        <article id = "cartTotal">
+            <p id = "yourTotal">Your Total: 41.96</p>
+         </article>
 
-        <article id="cartTotal">
-            <p id="yourTotal">Your Total: 41.96</p>
-        </article>
-
-        <button id="orderButton">Order Now</button>
+        <button id = "orderButton">Order Now</button>
 
     </section>
-
-    <section class="weatherApi">
-
-        <h2 id="weatherHeading">Calculate your shipping!</h2>
-        <form>
-            <p id="askForCity">Where do you live?</p>
-            <input type="text" class="search-box" placeholder="Type your city">
-        </form>
-    </section>
-
-
-    <section class="weatherDisplay">
-        <div class="city"></div>
-        <div class="date"></div>
-
-        <div class="current">
-            <div class="temp"><span>°c</span></div>
-            <div class="weather"></div>
-        </div>
-    </section>
-
 
 </main>
 <footer>
     <p>Impressum: Da steht was <br>
         Kontakt: Adresse <br>
-        Jobs(optional)<br>
-        <a href="feedback.html">Feedback</a></p>
+        <!--<a href="feedback.html">Feedback</a></p>-->
 </footer>
 </body>
 </html>

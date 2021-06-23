@@ -23,17 +23,19 @@ h1{
     font-family: Gadugi;
     color:  #014753;
     background-color:#d7f1f8;/*rgb(210,255,250);*/
-
+    font-size: 4.5em;
 }
 
 h2{
     font-family: Gadugi;
     color: #01839d;
+    font-size: xx-large;
 }
 
 p{
     font-family: Arial;
     color: #002a29;
+    font-size: large;
 }
 
 .signupin_tab-group {
@@ -48,9 +50,12 @@ a {
 td{
     font-family: Arial;
 }
+th{
+    font-family: Arial;
+    font-size: x-large;
+}
 #easterEgg{
     font-style: italic;
-
 }
 
 @media only screen and (max-width: 600px) {
