@@ -1,6 +1,5 @@
 
 body{
-    margin: 3em;
     box-shadow: 0 0 8px 10px rgba(210,255,250,0.9);
 }
 main{
@@ -58,8 +57,4 @@ th{
     font-style: italic;
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        margin: 2em;
-    }
-}
+

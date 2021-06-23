@@ -100,7 +100,24 @@ button:hover {
         margin-left: 8%;
         width: 85%;
     }
-
+    #firstCol{
+        font-size: 2vh;
+    }
+    #secondCol{
+        font-size: 2vh;
+    }
+    #thirdCol{
+        font-size: 2vh;
+    }
+    #fourthCol{
+        font-size: 2vh;
+    }
+    #fifthCol{
+        font-size: 2vh;
+    }
+    #sixthCol{
+        font-size: 2vh;
+    }
     #cartTotal{
         margin: 4% 0 0 18%;
     }
@@ -115,15 +132,177 @@ button:hover {
 }
 @media screen and (max-width: 768px) {
     #cartTable{
-        margin-left: 3%;
+        margin-left: 7%;
     }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 540px) {
+    section {
+        height: 100vh;
+    }
+    #cartTable{
+        margin-left: 5.5%;
+    }
+
+    #firstCol{display: none;}
+    #fourthCol{display: none;}
+
     .notVisible{
         display: none;
     }
-    #firstCol{display: none;}
+    #cartTotal {
+        margin: 4% 0 0 18%;
+        padding: 0;
+        height: 7%;
+        width: 55%;
+    }
+    #yourTotal{
+        text-align: center;
+    }
+    #orderButton{
+        float: right;
+        margin-right: 5%;
+    }
+
+}
+@media screen and (max-width: 411px) {
+    #cartTable{
+        border: 0;
+        margin-left: 4.5%;
+    }
+    #firstCol{
+        display: none;
+    }
+    #secondCol{
+        font-size: 2.5vh;
+        padding: 0 3px;
+    }
+    #thirdCol {
+        font-size: 2.5vh;
+        width: 10%;
+        padding: 0 3px;
+    }
+    #fifthCol {
+        font-size: 2.5vh;
+        width: 10%;
+        padding: 0 3px;
+    }
+    #sixthCol {
+        font-size: 2.5vh;
+        width: 10%;
+        padding: 0 3px;
+    }
+
+}
+@media screen and (max-width: 414px) {
+    h1{
+        padding: 0.5% 0.5% 5% 0.5%;
+    }
+    .notVisible{
+        display: none;
+    }
+    #cartTable{
+        margin: 1%;
+        padding: 0;
+    }
+    #firstCol{
+        display: none;
+    }
+    #secondCol{
+        font-size: 3vh;
+        padding: 0 3px;
+    }
+    #thirdCol {
+        font-size: 3vh;
+        width: 10%;
+        padding: 0 3px;
+    }
+    #fifthCol {
+        font-size: 3vh;
+        width: 10%;
+        padding: 0 3px;
+    }
+    #sixthCol {
+        font-size: 3vh;
+        width: 10%;
+        padding: 0 3px;
+    }
+    #cartTotal{
+        height: 8%;
+        width: 80%;
+        margin-left: 8%;
+        margin-top: 7%;
+    }
+    #orderButton{
+        margin-top: 12%;
+        margin-right: 10%;
+    }
 }
 @media screen and (max-width: 375px) {
-    #fourthCol{display: none;}
+    article > h1{
+        font-size: 4em;
+    }
+    #cartTable{
+        margin: 1.5%;
+        border:0;
+    }
+    #firstCol{
+        display: none;
+    }
+    #secondCol{
+        font-size: 3vh;
+    }
+    #thirdCol {
+        font-size: 3vh;
+    }
+    #fourthCol{
+         display: none;
+     }
+    #fifthCol {
+        font-size: 3.5vh;
+    }
+    #sixthCol {
+        font-size: 3vh;
+    }
+}
+@media screen and (max-width: 320px) {
+    article>h1{
+        font-size: 3em;
+    }
+    tr>td{
+        font-size: medium;
+    }
+    #cartTable{
+        margin-left: 3%;
+    }
+    #firstCol{
+        display: none;
+    }
+    #secondCol{
+        font-size: 2.5vh;
+        padding: 0 3px;
+    }
+    #thirdCol {
+        font-size: 2.5vh;
+    }
+    #fourthCol{
+        display: none;
+    }
+    #fifthCol {
+        font-size: 3vh;
+    }
+    #sixthCol {
+        font-size: 2vh;
+    }
+    #cartTotal{
+         height: 8%;
+         width: 90%;
+         margin-left: 3%;
+         margin-top: 10%;
+     }
+    #orderButton{
+        margin-top: 12%;
+        margin-right: 10%;
+        padding: 4%;
+        font-size: 3vh;
+    }
 }

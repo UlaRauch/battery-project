@@ -129,11 +129,37 @@ footer > p {
 
 }
 
-
+@media screen and (max-width: 540px) {
+    #mainIcon{
+        width: 10%;
+    }
+    #teamIcon{
+        width: 10%;
+        padding-top: 0.5%;
+    }
+    #signIcon{
+        width: 12%;
+    }
+    #shopIcon{
+        width: 13%;
+    }
+    #shoppingcartIcon{
+        width: 15%;
+    }
+    header{
+        height: 9vh;
+    }
+    body{
+        margin: 2em;
+    }
+}
 
 @media screen and (max-width: 414px) {
     header{
         height: 8.5vh;
+    }
+    body{
+        margin: 1.5em;
     }
 
     #mainIcon{
@@ -219,6 +245,6 @@ footer > p {
         width: 18%;
     }
     body{
-        margin: 2em;
+        margin: 1.5em;
     }
 }
