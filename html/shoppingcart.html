@@ -9,12 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="../JS/shoppingCart.js"></script>
 
+
 </head>
 <body>
 <header>
     <ul>
-        <li><a href="main.html"><img id = "mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
-        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg" ></a></li>
+        <li><a href="main.html"><img id="mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
+        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg"></a></li>
         <li><a href="signUpIn.html"><img id="signIcon" alt="SignIn Icon " src="../images/SignIn2.jpg"></a></li>
     </ul>
 </header>
@@ -26,25 +27,36 @@
             <h1>Shopping Cart</h1>
 
 
-        <table id="cartTable">
-            <tr>
-                <th id="firstCol">Number</th>
-                <th id="secondCol">Product Name</th>
-                <th id="thirdCol">Quantity</th>
-                <th id="fourthCol">Price Details</th>
-                <th id="fifthCol">Total</th>
-                <th id="sixthCol">Remove Item</th>
-            </tr>
+            <table id="cartTable">
+                <tr>
+                    <th id="firstCol">Number</th>
+                    <th id="secondCol">Product Name</th>
+                    <th id="thirdCol">Quantity</th>
+                    <th id="fourthCol">Price Details</th>
+                    <th id="fifthCol">Total</th>
+                    <th id="sixthCol">Remove Item</th>
+                </tr>
 
-        </table>
+            </table>
         </article>
 
-        <article id = "cartTotal">
-            <p id = "yourTotal">Your Total: 41.96</p>
-         </article>
+        <article id="cartTotal">
+            <p id="yourTotal">Your Total: </p>
+        </article>
 
-        <button id = "orderButton">Order Now</button>
+        <button id="orderButton">Order Now</button>
 
+    </section>
+
+    <section id="weatherApi">
+
+        <article id="currentWeather">
+            <h2 id="weatherHeading">Calculate your shipping!</h2>
+            <p id="cityName">Here's the Weather in Vienna.</p>
+            <p id="temp"></p>
+            <p id="weatherCondition"></p>
+
+        </article>
     </section>
 
 </main>
