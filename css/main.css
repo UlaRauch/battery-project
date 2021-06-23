@@ -146,9 +146,11 @@ td>h2 {
 }
 @media screen and (max-width: 540px) {
 #teamArticle{
-    height: 46em;
+    height: 60em;
 }
-
+article{
+    height: 55em;
+}
 td>p {
     margin-left: 25%;
     font-size: medium;
