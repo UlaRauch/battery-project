@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let tableData5 = document.createElement("td");
             tableData5.innerText = "" + parseInt(numberQ) * product.ProductPrice;
             tableData5.id = "total" + number;
-            console.log(tableData5.id);
+            tableData5.className = "tot" + product.ProductID;
             number++;
 
             let tableData6 = document.createElement("td");
@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         deleteFromTable(product) {
             let x = document.getElementById(product.ProductID);
-            x.remove();
+            xar.calculateAfterDelete("tot"+product.ProductID);
             localStorage.removeItem(product.ProductID);
-            x.calculateTotal();
+            x.remove();
         }
 
     }
@@ -112,21 +112,49 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let arrayOfKeys = Object.keys(localStorage);
 
             for (let i = 0; i < arrayOfKeys.length; i++) {
-                let temp = document.getElementById("total" + i);
-                console.log(temp);
+                let temp2 = "total" + i;
+                //let temp = document.getElementById("total" + i);
+                let temp = document.getElementById(temp2);
+                //console.log(temp);
                 temp = parseInt(temp.innerText);
-                console.log(temp);
+                //console.log(temp);
                 totalPrize += temp;
             }
             let yourTotal = document.getElementById("yourTotal");
             yourTotal.innerText = "Your total: $" + totalPrize;
         }
+
+        calculateAfterDelete(id){
+            console.log(id);
+            let totalPrize = 0;
+            let arrayOfKeys = Object.keys(localStorage);
+
+            for (let i = 0; i < arrayOfKeys.length; i++) {
+                let temp2 = "total" + i;
+                //let temp = document.getElementById("total" + i);
+                let temp = document.getElementById(temp2);
+                //console.log(temp);
+                temp = parseInt(temp.innerText);
+                //console.log(temp);
+                totalPrize += temp;
+            }
+            console.log(totalPrize);
+
+            let mamboJumbo = document.getElementsByClassName(id);
+            mamboJumbo = mamboJumbo[0].innerHTML;
+            mamboJumbo = parseInt(mamboJumbo);
+            //console.log(mamboJumbo[0].innerHTML);
+            let yourTotal = document.getElementById("yourTotal");
+            yourTotal.innerText = "Your total: $" + (totalPrize - mamboJumbo);
+        }
+
+
     }
-    let x = new weatherApi();
+
+    let xar = new weatherApi();
 
     const shopCart = new ShoppingCart();
-    x.getCurrent("Vienna");
-    x.calculateTotal();
+    xar.getCurrent("Vienna");
     //saves localstoarge
     let arrayOfKeys = Object.keys(localStorage);
     let arrayOfValues = Object.values(localStorage);
