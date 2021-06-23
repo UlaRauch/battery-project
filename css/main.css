@@ -12,6 +12,7 @@ article > p {
     margin-right: auto;
     max-width: 100%;
     max-height: 85%;
+    padding-top: 10%;
     height: auto;
     object-fit: cover;
 }
@@ -62,18 +63,18 @@ margin:0;
 section > p{
 margin:0;
 }
-article a:link, a:visited{
+#easterEgg a:link, a:visited{
 text-decoration: none;
 color: rgb(210,255,250);
-margin-left: 47%;
+padding-left: 47%;
 
 }
-article a:hover {
+#easterEgg a:hover {
 color: rgb(255,120,62);
 }
 
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1024px) {
 
 
 #Ula{
@@ -93,12 +94,12 @@ color: rgb(255,120,62);
     margin-left: 0.9em;
 }
 #teamArticle{
-    height: 60em;
+    height: 70em;
     margin-top: 5%;
 }
 
 article{
-    height: 30em;
+    height: 90em;
 }
 
 #tl1{
@@ -129,18 +130,20 @@ td>p {
 td>h2 {
     padding-left: 45%;
 }
-#easterEgg a:link, a:visited{
-    padding-left: 42%;
+    #easterEgg a:link, a:visited{
+        padding-left: 42%;
+
+    }
 
 }
+@media screen and (max-width: 768px) {
+    article{
+      height: 70em;
+    }
+    #teamArticle{
+        height: 70em;
+    }
 
-
-}
-@media screen and (max-width: 780px) {
-article{
-  height: 44em;
-
-}
 }
 @media screen and (max-width: 540px) {
 #teamArticle{
@@ -158,10 +161,13 @@ td>p {
     padding-top: 9%;
 }
 #teamArticle{
-    height: 56em;
+    height: 60em;
+}
+#teamArticle>h1{
+    padding: 0;
 }
 article{
-    height: 40em;
+    height: 55em;
 }
 #Ula{
     margin-left: 0.7em;
@@ -179,12 +185,33 @@ article{
     margin-left: 0.7em;
     margin-top: 22%;
 }
+    #easterEgg a:link, a:visited{
+        padding-left: 35%;
+
+    }
 }
 
 @media screen and (max-width: 375px) {
-#mainp2{
-    padding-top: 10%;
-}
+    #mainp2{
+        padding-top: 10%;
+    }
+    #teamArticle{
+        height: 65em;
+    }
+    article{
+        height: 47em;
+    }
+    #teamArticle > h1{
+        text-align: center;
+        padding: 0;
+    }
+    #easterEgg{
+        padding-left: 0;
+    }
+    #easterEgg a:link, a:visited{
+        padding-left: 35%;
+
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -192,6 +219,16 @@ article{
 #mainp2{
     padding-top: 10%;
 }
+    #mainArticle > h1{
+        padding: 0;
+        font-size: 4em;
+    }
+    article{
+        height: 40em;
+    }
+    #teamArticle>h1{
+        font-size:3.5em;
+    }
 #Ula{
     margin-top: 31%;
     margin-left: 0.5em;
@@ -208,7 +245,7 @@ article{
     margin-left: 0.3em;
 }
 #teamArticle{
-    height: 67em;
+    height: 70em;
 }
 #easterEgg a:link, a:visited{
     padding-left: 30%;

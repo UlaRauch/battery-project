@@ -1,8 +1,7 @@
-article{
-    height: 100%;
-    width: 100%;
-}
 
+section{
+    height: 70vh;
+}
 
 h1{
     margin:0;
@@ -56,7 +55,6 @@ tr>td{
 }
 #fifthCol{
     width: 10%;
-    font-size: xx-large;
 }
 #sixthCol{
     width: 6%;
@@ -64,13 +62,13 @@ tr>td{
 
 
 #cartTotal {
-    position: fixed;
+    float: left;
     background-color: #aacfe2;
     width: 20%;
-    padding: 20px;
+    padding: 1% 5%;
     /* margin: 45px; */
     margin: 3.1% 0 0 28%;
-    height: 40px;
+    /*height: 40px;*/
     border: 5px black solid;
 }
 
@@ -84,7 +82,7 @@ tr>td{
 }
 
 #orderButton {
-    margin: 4% 0 4% 59%;
+    margin: 4% 15% 0 5%;
     background-color: #E0B0FF;
     color: black;
     border: 2px solid;
@@ -97,3 +95,35 @@ button:hover {
     box-shadow: 0 12px 16px 0 grey, 0 17px 50px 0 grey;
 }
 
+@media screen and (max-width: 1024px) {
+    #cartTable {
+        margin-left: 8%;
+        width: 85%;
+    }
+
+    #cartTotal{
+        margin: 4% 0 0 18%;
+    }
+    #yourTotal{
+        padding-top: 5%;
+    }
+    #orderButton {
+    margin-top: 6.8%;
+        margin-left: 11%;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    #cartTable{
+        margin-left: 3%;
+    }
+}
+@media screen and (max-width: 414px) {
+    .notVisible{
+        display: none;
+    }
+    #firstCol{display: none;}
+}
+@media screen and (max-width: 375px) {
+    #fourthCol{display: none;}
+}
