@@ -146,6 +146,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     //let test = localStorage.getItem(Product.ProductName);
                     //test.items = JSON.parse(test.items);
                     //console.log(test.items.ProductName);
+                    /*
+
                     var arrayOfKeys = Object.keys(localStorage);
                     var arrayOfValues = Object.values(localStorage);
 
@@ -165,6 +167,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         console.log(arrayOfKeys[i]);
                         console.log(arrayOfValues[i]);
                     }
+
+
+                     */
 
 
 

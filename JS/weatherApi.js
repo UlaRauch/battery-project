@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 //search bar
-    const searchBox = document.querySelector(".search-box");
+    const searchBox = document.createElement(".search-box");
     searchBox.addEventListener("click", setQuery);
 
     function setQuery(event) {
@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     function displayResults(weather) {
 
-        let city = document.querySelector('.weatherDisplay.city');
+        let city = document.createElement('.weatherDisplay.city');
         city.innerText = `${weather.name}, ${weather.sys.country}`;
 
-        let temp = document.querySelector('.current .temp');
+        let temp = document.createElement('.current .temp');
         temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
 
 
