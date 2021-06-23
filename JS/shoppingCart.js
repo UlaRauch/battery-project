@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             let cartTable = document.getElementById("cartTable");
             let tableRow = document.createElement("tr");
+            tableRow.id = product.ProductID;
             let tableData1 = document.createElement("td");
             tableData1.innerText = "" + productNumber;
 
@@ -44,7 +45,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             let tableData6 = document.createElement("td");
             let removeButton = document.createElement("button");
-            removeButton.addEventListener("click", shopCart.deleteFromTable);
+            //removeButton.addEventListener("click", shopCart.deleteFromTable);
+            removeButton.addEventListener('click', function(){
+                shopCart.deleteFromTable(product);
+            })
             removeButton.innerHTML = "delete";
 
 
@@ -61,19 +65,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
 
         deleteFromTable(product) {
-
-            let productToBeDeleted;
-            for (let i = 0; i < arrayOfKeys.length; i++) {
-                if (productToBeDeleted === product[i]) {
-                    productToBeDeleted = product[i];
-                    //productToBeDeleted.slice(i, 1);
-                    break;
-                }
-
-            }
-            //console.log(this.);
-            //  productToBeDeleted.quantity = 0;
-
+            let x = document.getElementById(product.ProductID);
+            x.remove();
+            localStorage.removeItem(product.ProductID);
         }
 
 
