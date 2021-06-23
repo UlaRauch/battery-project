@@ -128,19 +128,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         calculateAfterDelete(id){
             console.log(id);
-            let totalPrize = 0;
-            let arrayOfKeys = Object.keys(localStorage);
-
-            for (let i = 0; i < arrayOfKeys.length; i++) {
-                let temp2 = "total" + i;
-                //let temp = document.getElementById("total" + i);
-                let temp = document.getElementById(temp2);
-                //console.log(temp);
-                temp = parseInt(temp.innerText);
-                //console.log(temp);
-                totalPrize += temp;
-            }
-            console.log(totalPrize);
+            let test = document.getElementById("yourTotal").innerText;
+            test = test.split("$",10);
+            test = test[1];
+            console.log(test);
+            let totalPrize = test;
+            //console.log(totalPrize);
 
             let mamboJumbo = document.getElementsByClassName(id);
             mamboJumbo = mamboJumbo[0].innerHTML;
