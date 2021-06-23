@@ -91,6 +91,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
             button.addEventListener(
                 'click',
                 function(){
+
+                    // Put Request - erst spaeter wichtig!!
+                    /*
+                    const product = {
+                            "ProductName": Product.ProductName,
+                            "ProductPrice": Product.ProductPrice,
+                            "ProductCover": Product.ProductCover,
+                            "ProductDescription": Product.ProductDescription,
+                            "ProductID": Product.ProductID,
+                            "ProductStockQuantity": 5
+                    }
+
+                    const id = Product.ProductID
+                    //const change = select.options[select.selectedIndex].value;
+                    const data = {id, product};
+
+                    fetch("http://localhost:1337/api/v1/products/1",{
+                        method: 'Put',
+                        headers:{
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(product),
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Success:', data);
+                        })
+                        .catch((error) => {
+                            console.error('Error:', error);
+                        });
+
+
+                     */
+
+
+                    //---- alt
+
                     Product.ProductStockQuantity += Number(select.options[select.selectedIndex].value);
                     //localStorage.clear();
                     if(localStorage.getItem(Product.ProductID)){
@@ -130,13 +167,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     }
 
 
-                    /*
-                    for (var i = 0; i < arrayOfKeys.length; i++){
-                        console.log(arrayOfKeys[i]);
-                        console.log(arrayOfValues[i]);
-                    }
 
-                     */
                 },
                 false
             );
