@@ -12,7 +12,6 @@ article > p {
     margin-right: auto;
     max-width: 100%;
     max-height: 85%;
-    padding-top: 10%;
     height: auto;
     object-fit: cover;
 }
@@ -99,7 +98,7 @@ color: rgb(255,120,62);
 }
 
 article{
-    height: 90em;
+    height: 80em;
 }
 
 #tl1{
@@ -138,7 +137,7 @@ td>h2 {
 }
 @media screen and (max-width: 768px) {
     article{
-      height: 70em;
+      height: 65em;
     }
     #teamArticle{
         height: 70em;
@@ -167,7 +166,7 @@ td>p {
     padding: 0;
 }
 article{
-    height: 55em;
+    height: 50em;
 }
 #Ula{
     margin-left: 0.7em;
@@ -224,7 +223,7 @@ article{
         font-size: 4em;
     }
     article{
-        height: 40em;
+        height: 35em;
     }
     #teamArticle>h1{
         font-size:3.5em;
@@ -245,7 +244,7 @@ article{
     margin-left: 0.3em;
 }
 #teamArticle{
-    height: 70em;
+    height: 68em;
 }
 #easterEgg a:link, a:visited{
     padding-left: 30%;
