@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             let tableData6 = document.createElement("td");
             let removeButton = document.createElement("button");
+            removeButton.addEventListener("click", shopCart.deleteFromTable);
+            removeButton.innerHTML = "delete";
+
+
+
 
             tableData6.append(removeButton);
             tableRow.append(tableData1);
@@ -54,14 +59,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
             tableRow.append(tableData6);
             cartTable.append(tableRow);
         }
+
+        deleteFromTable(product) {
+
+            let productToBeDeleted;
+            for (let i = 0; i < arrayOfKeys.length; i++) {
+                if (productToBeDeleted === product[i]) {
+                    productToBeDeleted = product[i];
+                    //productToBeDeleted.slice(i, 1);
+                    break;
+                }
+
+            }
+            //console.log(this.);
+            //  productToBeDeleted.quantity = 0;
+
+        }
+
+
     }
 
     const shopCart = new ShoppingCart();
     //saves localstoarge
-    var arrayOfKeys = Object.keys(localStorage);
-    var arrayOfValues = Object.values(localStorage);
+    let arrayOfKeys = Object.keys(localStorage);
+    let arrayOfValues = Object.values(localStorage);
 
-    for (var i = 0; i < arrayOfKeys.length; i++) {
+    for (let i = 0; i < arrayOfKeys.length; i++) {
         fetch("http://localhost:1337/api/v1/products/" + arrayOfKeys[i])
             .then(function (res) {
                 res.json()
@@ -74,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         //console.log(arrayOfKeys[i]);
         //console.log(arrayOfValues[i]);
     }
+
 
 });
 
