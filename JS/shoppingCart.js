@@ -18,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         shoppingCartTable(product) {
 
-
             productNumber++;
-
 
             //server data: price, name; local storage: quantity
 
@@ -36,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let numberQ = localStorage.getItem(product.ProductID);
             console.log(numberQ);
             tableData3.innerText = numberQ;
-
 
             let tableData4 = document.createElement("td");
             tableData4.innerText = product.ProductPrice;
@@ -64,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var arrayOfKeys = Object.keys(localStorage);
     var arrayOfValues = Object.values(localStorage);
 
-    for (var i = 0; i < arrayOfKeys.length; i++){
-        fetch("http://localhost:1337/api/v1/products/"+arrayOfKeys[i])
-            .then(function (res){
+    for (var i = 0; i < arrayOfKeys.length; i++) {
+        fetch("http://localhost:1337/api/v1/products/" + arrayOfKeys[i])
+            .then(function (res) {
                 res.json()
-                    .then(function(json){
+                    .then(function (json) {
                         shopCart.shoppingCartTable(json);
                     })
             })
@@ -78,44 +75,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         //console.log(arrayOfValues[i]);
     }
 
-    /*
-    let cart = document.querySelectorAll('button');
-
-    for (let i = 0; i < cart.length; i++) {
-        cart[i].addEventListener('click', () =>
-        locStorage());
-    }
-
-    function locStorage() {
-        let localProducts = localStorage.getItem('locStorage');
-
-        localProducts = parseInt(localProducts);
-
-        localStorage.setItem('localProducts', 1);
-    }
-
-
-    let shoppingCart = {
-        //save shopping cart items to local storage
-        save : function () {
-            localStorage.setItem("cart", JSON.stringify(shoppingCart.items));
-        },
-
-        //load data from lacal storage (restore shopping cart items)
-        load : function() {
-            shoppingCart.items = localStorage.getItem("shoppingCart");
-
-            if (shoppingCart.items == NULL) {
-                shoppingCart.items = {};
-            }
-            else {
-                shoppingCart.items = JSON.parse(shoppingCart.items);}
-        }
-    };
-    */
-
-
 });
+
+
+
+
 
 
 
