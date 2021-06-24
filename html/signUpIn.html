@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="../css/NavFood.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/lightmode.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <script defer src="../JS/darkmode.js"></script>
     <script src="../JS/signUpIn.js"></script>
 </head>
-<body>
-<header>
+<body id="body" class="body-lightmode">
+<header id="header" class="nav-lightmode">
     <ul>
         <li><a href="main.html"><img id = "mainIcon" alt="battery mascot" src="../images/Mainpicture.PNG"></a></li>
         <li><a href="shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon" src="../images/Shoppingcart.PNG"></a></li>
@@ -18,7 +21,7 @@
     </ul>
 </header>
 
-<main>
+<main id="main" class="main-lightmode">
     <section class="signupclasstemp">
         <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
 
@@ -28,7 +31,7 @@
             <li><a href="#" id="goToSignIn" class="tab">Sign In</a></li>
         </ul>
 
-        <h1>Create your account</h1>
+        <h1 id="h1" class="h1-lightmode">Create your account</h1>
 
         <section class="tab-content">
             <section class="signupinform" id="signupform">
@@ -95,10 +98,11 @@
     </section>
 </main>
 
-<footer>
+<footer id="footer" class="footer-lightmode">
     <p>Impressum: Da steht was <br>
         Kontakt: Adresse <br>
         <!--<a href="feedback.html">Feedback</a></p>-->
+        <button id="dark-mode-toggle" class="dark-mode-toggle">Toggle</button>
 </footer>
 </body>
 </html>
