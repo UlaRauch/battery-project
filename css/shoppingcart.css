@@ -75,7 +75,7 @@ tr>td{
     border: 5px black solid;
 }
 
-#yourTotal {
+#productTotal {
 
     font-weight: bold;
     text-align: center;
@@ -138,7 +138,7 @@ button:hover {
     #cartTotal{
         margin: 9% 0 0 18%;
     }
-    #yourTotal{
+    #productTotal{
         padding-top: 5%;
     }
     #orderButton {
@@ -160,7 +160,7 @@ button:hover {
         height: 7%;
         width: 40%;
     }
-    #yourTotal{
+    #productTotal{
         padding: 0.2em 0 0 0 ;
     }
     #orderButton{
@@ -208,7 +208,7 @@ button:hover {
         height: 7%;
         width: 55%;
     }
-    #yourTotal{
+    #productTotal{
         text-align: center;
         padding-top: 3%;
     }
