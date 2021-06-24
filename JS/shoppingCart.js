@@ -114,17 +114,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             // neue schleife damit objekte mit null nicht rein geladen werden
             for (let i = 0; i < arrayOfKeys.length; i++) {
-                if(document.getElementById("total"+i).innerText !== null){
-                    let temp2 = "total" + i;
-                    //let temp = document.getElementById("total" + i);
-                    let temp = document.getElementById(temp2);
-                    //console.log(temp);
-                    temp = parseInt(temp.innerText);
-                    //console.log(temp);
-                    totalPrize += temp;
+                try{
+                        let temp2 = "total" + i;
+                        //let temp = document.getElementById("total" + i);
+                        let temp = document.getElementById(temp2);
+                        //console.log(temp);
+                        temp = parseInt(temp.innerText);
+                        //console.log(temp);
+                        totalPrize += temp;
+
+                    let yourTotal = document.getElementById("yourTotal");
+                    yourTotal.innerText = "Your total: $" + totalPrize;
+                }catch(ex){
+                    console.log("Errorhandling: " + ex);
                 }
-                let yourTotal = document.getElementById("yourTotal");
-                yourTotal.innerText = "Your total: $" + totalPrize;
+
                 }
         }
 
