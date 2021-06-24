@@ -1,25 +1,21 @@
 
-section{
-    height: 30vh;
+#productsInCart{
+    height: 55vh;
 }
-
+#weatherApi{
+    height: 25vh;
+}
 h1{
     margin:0;
     padding: 0.5em;
     text-align: center;
     font-size: 3em;
 }
-
 h2{
-    margin:10px;
-}
-
-.img{
-    object-fit: cover;
-    height:100%;
-    width: 100%;
-    border-bottom: solid 3px black;
-    border-right:solid 3px black;
+    margin:0;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 2em;
 }
 
 #cartTable {
@@ -60,7 +56,14 @@ tr>td{
     width: 6%;
 }
 
-
+#cityName{
+    float: left;
+    margin: 1% 0 1% 29%;
+}
+#temp{
+    float: left;
+    margin: 0.7% 5% 0 5%;
+}
 #cartTotal {
     float: left;
     background-color: #aacfe2;
@@ -73,8 +76,7 @@ tr>td{
 }
 
 #yourTotal {
-    font-family: Arial;
-    font-size: x-large;
+
     font-weight: bold;
     text-align: center;
     margin: 0;
@@ -89,17 +91,31 @@ tr>td{
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    font-size: 24px;
 }
 button:hover {
     box-shadow: 0 12px 16px 0 grey, 0 17px 50px 0 grey;
 }
 
 
+
+
 @media screen and (max-width: 1024px) {
+
+    #productsInCart{
+        height: 55vh;
+    }
+    #weatherApi{
+        height: 25vh;
+    }
+    #cityName{
+        margin: 2% 0 0 6%;
+    }
+    #weatherCondition{
+        margin-top: 2.5%;
+    }
     #cartTable {
-        margin-left: 8%;
-        width: 85%;
+        margin-left: 5%;
+        width: 90%;
     }
     #firstCol{
         font-size: 2vh;
@@ -120,13 +136,13 @@ button:hover {
         font-size: 2vh;
     }
     #cartTotal{
-        margin: 4% 0 0 18%;
+        margin: 9% 0 0 18%;
     }
     #yourTotal{
         padding-top: 5%;
     }
     #orderButton {
-    margin-top: 6.8%;
+    margin-top: 9.4%;
         margin-left: 11%;
     }
 
@@ -134,24 +150,58 @@ button:hover {
 
 @media screen and (max-width: 768px) {
     #cartTable{
-        margin-left: 7%;
+        margin-left: 5%;
     }
+    #productsInCart{
+        height: 55vh;
+    }
+    #cartTotal{
+        margin-left: 8%;
+        height: 7%;
+        width: 40%;
+    }
+    #yourTotal{
+        padding: 0.2em 0 0 0 ;
+    }
+    #orderButton{
+        float: left;
+        margin-top: 10%;
+        margin-right: 0;
+     }
+
+    #weatherApi{
+        height: 25vh;
+    }
+    #weatherHeading{
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
+    #cityName{
+        margin: 2% 0 0 6%;
+    }
+    #weatherCondition{
+        margin-top: 1%;
+    }
+
 }
 
 @media screen and (max-width: 540px) {
     section {
         height: 100vh;
     }
+    #productsInCart{
+        height: 87vh;
+    }
     #cartTable{
         margin-left: 5.5%;
     }
-
     #firstCol{display: none;}
     #fourthCol{display: none;}
 
     .notVisible{
         display: none;
     }
+
     #cartTotal {
         margin: 4% 0 0 18%;
         padding: 0;
@@ -160,45 +210,31 @@ button:hover {
     }
     #yourTotal{
         text-align: center;
+        padding-top: 3%;
     }
     #orderButton{
         float: right;
         margin-right: 5%;
+        margin-top: 4%;
     }
 
-}
+    #weatherApi{
+        height: 32vh;
+    }
+    #cityName{
+        margin: 2% 0 0 6%;
+    }
 
-@media screen and (max-width: 411px) {
-    #cartTable{
-        border: 0;
-        margin-left: 4.5%;
-    }
-    #firstCol{
-        display: none;
-    }
-    #secondCol{
-        font-size: 2.5vh;
-        padding: 0 3px;
-    }
-    #thirdCol {
-        font-size: 2.5vh;
-        width: 10%;
-        padding: 0 3px;
-    }
-    #fifthCol {
-        font-size: 2.5vh;
-        width: 10%;
-        padding: 0 3px;
-    }
-    #sixthCol {
-        font-size: 2.5vh;
-        width: 10%;
-        padding: 0 3px;
+    #weatherCondition{
+        margin-top: 2%;
     }
 
 }
 
 @media screen and (max-width: 414px) {
+    #productsInCart{
+        height: 77vh;
+    }
     h1{
         padding: 0.5% 0.5% 5% 0.5%;
     }
@@ -206,31 +242,33 @@ button:hover {
         display: none;
     }
     #cartTable{
-        margin: 1%;
+        margin: 0;
         padding: 0;
+        border: 0;
     }
     #firstCol{
         display: none;
     }
     #secondCol{
-        font-size: 3vh;
+        font-size: 2.5vh;
         padding: 0 3px;
     }
     #thirdCol {
-        font-size: 3vh;
+        font-size: 2.5vh;
         width: 10%;
         padding: 0 3px;
     }
     #fifthCol {
-        font-size: 3vh;
+        font-size: 2.5vh;
         width: 10%;
         padding: 0 3px;
     }
     #sixthCol {
-        font-size: 3vh;
+        font-size: 2.5vh;
         width: 10%;
         padding: 0 3px;
     }
+
     #cartTotal{
         height: 8%;
         width: 80%;
@@ -240,7 +278,29 @@ button:hover {
     #orderButton{
         margin-top: 12%;
         margin-right: 10%;
+        padding: 2%;
+        font-size: 100%;
+
     }
+
+    #weatherApi{
+        height: 37vh;
+    }
+    #weatherHeading{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #cityName {
+        margin: 2% 0 0 13%;
+    }
+
+    #temp{
+        margin: 4% 6% 0 28%;
+    }
+    #weatherCondition{
+        margin-top: 13%;
+    }
+
 }
 
 @media screen and (max-width: 375px) {
@@ -272,17 +332,27 @@ button:hover {
     tr>td{
         font-size: small;
     }
+    #weatherApi{
+        height: 42vh;
+    }
+    #weatherCondition{
+        margin-top: 14%;
+    }
 }
 
 @media screen and (max-width: 320px) {
+    #productsInCart{
+        height: 86vh;
+    }
     article > h1{
         font-size: 3em;
     }
     tr>td{
-        font-size: medium;
+        font-size: small;
+        padding: 1%;
     }
     #cartTable{
-        margin-left: 3%;
+        margin-left: 2%;
     }
     #firstCol{
         display: none;
@@ -294,6 +364,7 @@ button:hover {
     #thirdCol {
         font-size: 2.5vh;
     }
+
     #fourthCol{
         display: none;
     }
@@ -301,7 +372,7 @@ button:hover {
         font-size: 3vh;
     }
     #sixthCol {
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
     #cartTotal{
          height: 8%;
@@ -314,5 +385,14 @@ button:hover {
         margin-right: 10%;
         padding: 4%;
         font-size: 3vh;
+    }
+    #weatherApi{
+        height: 47vh;
+    }
+    #cityName{
+        margin-left: 5%;
+    }
+    #weatherCondition{
+        margin-top: 15%;
     }
 }

@@ -59,5 +59,56 @@ th{
 #easterEgg{
     font-style: italic;
 }
+#weatherCondition{
+    font-size: xx-large;
+}
+
+#yourTotal {
+    font-size: x-large;
+}
+#temp{
+    font-size: xxx-large;
+}
+
+#cityName{
+    font-size: xx-large;
+}
+
+#orderButton {
+font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+#cityName{
+    font-size: x-large;
+}
+#temp{
+    font-size: xx-large;
+}
+#weatherCondition{
+    font-size: large;}
+}
 
 
+@media screen and (max-width: 540px) {
+#weatherCondition{
+    font-size: large;
+}
+    #temp{
+        font-size: x-large;
+    }
+
+    #weatherCondition{
+        font-size: large;
+    }
+    #cityName {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    #weatherCondition {
+        font-size: large;
+    }
+}
