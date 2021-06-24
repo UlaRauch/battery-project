@@ -21,7 +21,10 @@ article:nth-of-type(2n){
 h1{
     font-family: Gadugi;
     color:  #014753;
-    background-color:#d7f1f8;/*rgb(210,255,250);*/
+    /* Muss weg wegen darkmode :)
+    background-color:#d7f1f8; */
+    /*rgb(210,255,250);*/
+
     font-size: 4.5em;
 }
 

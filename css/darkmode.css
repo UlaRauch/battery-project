@@ -1,0 +1,16 @@
+.nav-darkmode{
+    background-color: green !important;
+}
+.main-darkmode{
+    background-color: darkgreen  !important;
+}
+.body-darkmode{
+    background-color: cyan  !important;
+}
+.footer-darkmode{
+    background-color: green  !important;
+}
+
+.h1-darkmode{
+    background-color: red;
+}

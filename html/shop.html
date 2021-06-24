@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/testShopStyle.css">
     <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/lightmode.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <script defer src="../JS/darkmode.js"></script>
     <script defer src="../JS/shop.js"></script>
 </head>
-<body>
-<header>
+<body id="body" class="body-lightmode">
+<header id="header" class="nav-lightmode">
     <ul>
         <li><a href="main.html"><img id = "mainIcon" alt="battery mascot" src="../images/Mainpicture.PNG"></a></li>
         <li><a href="shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon" src="../images/Shoppingcart.PNG"></a></li>
@@ -20,7 +23,7 @@
 
 
 
-<main class="js">
+<main id="main" class="main-lightmode" class="js">
     <h1>Shop</h1>
     <section id="productShop">
         <!--
@@ -46,7 +49,7 @@
         -->
     </section>
 </main>
-<footer>
+<footer id="footer" class="footer-lightmode">
     <p>Impressum: Da steht was <br>
         Kontakt: Adresse <br>
         <!--<a href="feedback.html">Feedback</a></p>-->
