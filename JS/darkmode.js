@@ -25,6 +25,24 @@
         mainArticle.className = "header-darkmode";
         mainArticle.classList.remove("header-lightmode");
 
+        let h1 = document.getElementById("h1");
+        h1.className = "h1-darkmode";
+        h1.classList.remove("h1-lightmode");
+
+        try{
+            let cartTotal = document.getElementById("cartTotal");
+            cartTotal.className = "navFooter-darkmode";
+            cartTotal.classList.remove("navFooter-lightmode");
+        }catch{
+
+        }
+        try{
+            let h2 = document.getElementById("h2");
+            h2.className = "h2-darkmode";
+            h2.classList.remove("h2-lightmode");
+        }catch{
+
+        }
     }
 
     const disableDarkMode = () => {
@@ -48,6 +66,30 @@
         let mainArticle = document.getElementById("h1");
         mainArticle.className = "header-lightmode";
         mainArticle.classList.remove("header-darkmode");
+
+        let h1 = document.getElementById("h1");
+        h1.className = "h1-lightmode";
+        h1.classList.remove("h1-darkmode");
+
+
+
+
+        try{
+            let cartTotal = document.getElementById("cartTotal");
+            cartTotal.className = "navFooter-lightmode";
+            cartTotal.classList.remove("navFooter-darkmode");
+
+
+        }catch{
+
+        }
+        try{
+            let h2 = document.getElementById("h2");
+            h2.className = "h2-lightmode";
+            h2.classList.remove("h2-darkmode");
+        }catch{
+
+        }
 
     }
 
