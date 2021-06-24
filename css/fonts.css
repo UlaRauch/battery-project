@@ -56,9 +56,6 @@ th{
     font-family: Arial;
     font-size: x-large;
 }
-#easterEgg{
-    font-style: italic;
-}
 #weatherCondition{
     font-size: xx-large;
 }
@@ -77,6 +74,20 @@ th{
 #orderButton {
 font-size: 24px;
 }
+
+#easterEgg a:link, a:visited{
+
+    font-style: italic;
+    text-decoration: none;
+    color: rgb(210,255,250);
+    padding-left: 47%;
+
+}
+#easterEgg a:hover {
+    font-style: italic;
+    color: rgb(255,120,62);
+}
+
 
 @media screen and (max-width: 768px) {
 #cityName{

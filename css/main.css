@@ -78,15 +78,7 @@ margin:0;
 section > p{
 margin:0;
 }
-#easterEgg a:link, a:visited{
-text-decoration: none;
-color: rgb(210,255,250);
-padding-left: 47%;
 
-}
-#easterEgg a:hover {
-color: rgb(255,120,62);
-}
 
 
 @media screen and (max-width: 1024px) {

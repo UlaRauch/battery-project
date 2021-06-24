@@ -180,7 +180,7 @@ button:hover {
         margin: 2% 0 0 6%;
     }
     #weatherCondition{
-        margin-top: 1%;
+        margin-top: 2.5%;
     }
 
 }
@@ -233,7 +233,7 @@ button:hover {
 
 @media screen and (max-width: 414px) {
     #productsInCart{
-        height: 77vh;
+        height: 91vh;
     }
     h1{
         padding: 0.5% 0.5% 5% 0.5%;
@@ -333,7 +333,7 @@ button:hover {
         font-size: small;
     }
     #weatherApi{
-        height: 42vh;
+        height: 52vh;
     }
     #weatherCondition{
         margin-top: 14%;

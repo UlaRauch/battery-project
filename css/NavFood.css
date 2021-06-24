@@ -75,6 +75,15 @@ footer > p {
     height: 3.5em;
 }
 
+
+audio{
+    float: right;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+
+
 @media screen and (max-width: 1030px) {
     #mainIcon{
         padding-left: 1em;
@@ -99,6 +108,13 @@ footer > p {
         padding-right: 1.5em;
         padding-top: 0.1em;
         width: 12%;
+    }
+
+
+
+
+    audio{
+        margin-left: 20%;
     }
 
 }
