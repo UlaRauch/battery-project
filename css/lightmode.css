@@ -1,4 +1,4 @@
-.nav-lightmode{
+.navFooter-lightmode{
     background-color: #aacfe2;
 }
 #main-lightmode{
@@ -7,7 +7,7 @@
 .body-lightmode{
     box-shadow: 0 0 8px 10px rgba(210,255,250,0.9);
 }
-.footer-lightmode{
+.items-lightmode{
     background-color: #aacfe2;
 }
 

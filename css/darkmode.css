@@ -1,4 +1,4 @@
-.nav-darkmode{
+.navFooter-darkmode{
     background-color: green !important;
 }
 .main-darkmode{
@@ -7,7 +7,7 @@
 .body-darkmode{
     background-color: cyan  !important;
 }
-.footer-darkmode{
+.items-darkmode{
     background-color: green  !important;
 }
 

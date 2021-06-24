@@ -14,12 +14,12 @@
         body.classList.remove("body-lightmode");
 
         let header = document.getElementById("header");
-        header.className = "nav-darkmode";
-        header.classList.remove("nav-lightmode");
+        header.className = "navFooter-darkmode";
+        header.classList.remove("navFooter-lightmode");
 
         let footer = document.getElementById("footer");
-        footer.className = "footer-darkmode";
-        footer.classList.remove("footer-lightmode");
+        footer.className = "navFooter-darkmode";
+        footer.classList.remove("navFooter-lightmode");
 
         let mainArticle = document.getElementById("h1");
         mainArticle.className = "header-darkmode";
@@ -38,12 +38,12 @@
         body.classList.remove("body-darkmode");
 
         let header = document.getElementById("header");
-        header.className = "nav-lightmode";
-        header.classList.remove("nav-darkmode");
+        header.className = "navFooter-lightmode";
+        header.classList.remove("navFooter-darkmode");
 
         let footer = document.getElementById("footer");
-        footer.className = "footer-lightmode";
-        footer.classList.remove("footer-darkmode");
+        footer.className = "vavFooter-lightmode";
+        footer.classList.remove("navFooter-darkmode");
 
         let mainArticle = document.getElementById("h1");
         mainArticle.className = "header-lightmode";

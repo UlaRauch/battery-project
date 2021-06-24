@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-
+/*
     class Product{
         constructor(ProductName, ProductPrice, ProductCover, ProductDescription, ProductID, ProductStockQuantity) {
             this.ProductName = ProductName;
@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
+
+ */
     class Shop {
         constructor() {
             //this.shoppingCart = new ShoppingCart("Shopping Cart");
@@ -92,42 +94,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 'click',
                 function(){
 
-                    // Put Request - erst spaeter wichtig!!
-                    /*
-                    const product = {
-                            "ProductName": Product.ProductName,
-                            "ProductPrice": Product.ProductPrice,
-                            "ProductCover": Product.ProductCover,
-                            "ProductDescription": Product.ProductDescription,
-                            "ProductID": Product.ProductID,
-                            "ProductStockQuantity": 5
-                    }
-
-                    const id = Product.ProductID
-                    //const change = select.options[select.selectedIndex].value;
-                    const data = {id, product};
-
-                    fetch("http://localhost:1337/api/v1/products/1",{
-                        method: 'Put',
-                        headers:{
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(product),
-                    })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Success:', data);
-                        })
-                        .catch((error) => {
-                            console.error('Error:', error);
-                        });
-
-
-                     */
-
-
-                    //---- alt
-
                     Product.ProductStockQuantity += Number(select.options[select.selectedIndex].value);
                     //localStorage.clear();
                     if(localStorage.getItem(Product.ProductID)){
@@ -141,38 +107,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         localStorage.setItem(Product.ProductID,select.options[select.selectedIndex].value);
                     }
 
-                    //console.log(localStorage.getItem(Product.ProductName));
-                    //localStorage.clear();
-                    //let test = localStorage.getItem(Product.ProductName);
-                    //test.items = JSON.parse(test.items);
-                    //console.log(test.items.ProductName);
-                    /*
-
-                    var arrayOfKeys = Object.keys(localStorage);
-                    var arrayOfValues = Object.values(localStorage);
-
-                    for (var i = 0; i < arrayOfKeys.length; i++){
-                        fetch("http://localhost:1337/api/v1/products/"+arrayOfKeys[i])
-                            .then(function (res){
-                                res.json()
-                                    .then(function(json){
-                                        let id = arrayOfKeys[i];
-                                        //let number = localStorage[id];
-                                        console.log(json.ProductPrice + "quantity +1: ");
-                                        console.log(localStorage[id]);
-                                    })
-                            })
-                        //test
-
-                        console.log(arrayOfKeys[i]);
-                        console.log(arrayOfValues[i]);
-                    }
-
-
-                     */
-
-
-
                 },
                 false
             );
@@ -184,17 +118,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             article3.append(h2);
 
-
-            //article3.append(p2);
             p.append(button);
-            // old
-            /*
-            article3.append(p);
-            article3.append(button);
-            article3.append(select);
-
-             */
-            //New
             article4.append(p);
             article4.append(button);
             article4.append(select);
@@ -210,20 +134,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     const shop = new Shop();
     let ProductArray = [];
-    /*
-    ProductArray[0] = new Product("Batterie",123,"../images/batterie1.jpg", 123, 5, 5);
-    ProductArray[1] = new Product("Batterie2",123,"../images/batterie1.jpg", 123, 5, 5);
-    ProductArray[2] = new Product("Batterie3",123,"../images/batterie1.jpg", 123, 5, 5);
-    ProductArray[3] = new Product("Batterie4",123,"../images/batterie1.jpg", 123, 5, 5);
-    ProductArray[4] = new Product("Batterie5",123,"../images/batterie1.jpg", 123, 5, 5);
-
-    shop.addProductToScreen(ProductArray[0]);
-    shop.addProductToScreen(ProductArray[1]);
-    shop.addProductToScreen(ProductArray[2]);
-    shop.addProductToScreen(ProductArray[3]);
-    shop.addProductToScreen(ProductArray[4]);
-
-     */
-
-
 });
