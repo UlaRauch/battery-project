@@ -31,7 +31,7 @@ h1{
 h2{
     font-family: Gadugi;
     color: #01839d;
-    font-size: xx-large;
+    font-size: 3em;
 }
 
 p{
@@ -40,9 +40,7 @@ p{
     font-size: large;
 }
 
-a {
-    decoration: none;
-}
+
 td{
     font-family: Arial;
 }
@@ -61,7 +59,7 @@ th{
     font-size: x-large;
 }
 #temp{
-    font-size: xxx-large;
+    font-size: 3em;
 }
 
 #cityName{
@@ -115,6 +113,12 @@ font-size: 24px;
 }
 
 @media screen and (max-width: 414px) {
+
+    #weatherCondition {
+        font-size: large;
+    }
+}
+@media screen and (max-width: 320px) {
 
     #weatherCondition {
         font-size: large;

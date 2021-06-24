@@ -1,25 +1,46 @@
 article{
-    background-color: rgb(89,89,89);
-    height: 100vh;
-    border-left: solid 1px black;
-    border-right: solid 1px black;
+    height: 75vh;
     width: 100%;
-}
-article:nth-of-type(2){
-    background-color: lightgray;
 }
 h1{
     margin:0;
     padding: 0.5em;
     text-align: center;
-    font-size: 3em;
-    background-color: rgb(89,89,89);
-    color:rgb(80,240,219);
 }
-
+h2{
+    margin: 0;
+    padding: 0.3em;
+    text-align: center;
+}
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    .center{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    article>h1{
+        font-size: 3em;
+    }
+    article>h2{
+        font-size: 2em;
+    }
+    article{
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 320px) {
+    article>h1{
+        padding: 0.3em;
+    }
+    article{
+        height: 90vh;
+    }
 }
