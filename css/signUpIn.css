@@ -25,7 +25,7 @@ p {
 .signupinform {
     padding: 40px;
     max-width: 600px;
-    margin: 40px auto;
+    margin: 40px auto 0px auto;
 }
 
 .signupin_tab-group {
