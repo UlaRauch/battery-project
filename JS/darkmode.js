@@ -43,6 +43,15 @@
         }catch{
 
         }
+
+        try{
+            let weather = document.getElementById("weatherHeading");
+            weather.className = "h2-darkmode";
+            weather.classList.remove("h2-lightmode");
+        }catch{
+
+        }
+
     }
 
     const disableDarkMode = () => {
@@ -87,6 +96,13 @@
             let h2 = document.getElementById("h2");
             h2.className = "h2-lightmode";
             h2.classList.remove("h2-darkmode");
+        }catch{
+
+        }
+        try{
+            let weather = document.getElementById("weatherHeading");
+            weather.className = "h2-lightmode";
+            weather.classList.remove("h2-darkmode");
         }catch{
 
         }

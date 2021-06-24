@@ -31,7 +31,7 @@ h1{
 h2{
     font-family: Gadugi;
     color: #01839d;
-    font-size: 3em;
+    font-size: xx-large;
 }
 
 p{
@@ -39,8 +39,12 @@ p{
     color: #002a29;
     font-size: large;
 }
+/*
+a {
+    decoration: none;
+}
 
-
+ */
 td{
     font-family: Arial;
 }
