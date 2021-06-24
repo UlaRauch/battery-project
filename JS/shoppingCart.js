@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     let shippingTwo = 0;
 
+    let shippingAmount = 0;
+
     class ShoppingCart {
 
 
@@ -42,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             let tableData3 = document.createElement("td");
             let numberQ = localStorage.getItem(product.ProductID);
-            console.log(numberQ);
             tableData3.innerText = numberQ;
 
             let tableData4 = document.createElement("td");
@@ -107,9 +108,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let weatherConditions = document.getElementById("weatherCondition");
             weatherConditions.innerText = data.weather[0].main;
 
-            console.log(shippingTwo);
-            this.calculateShipping(shippingTwo);
             this.calculateProductTotal();
+            this.calculateShipping(shippingTwo);
+            this.calculateTotal();
+
             return data;
         }
 
@@ -121,11 +123,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             for (let i = 0; i < arrayOfKeys.length; i++) {
                 try {
                     let temp2 = "total" + i;
-                    //let temp = document.getElementById("total" + i);
                     let temp = document.getElementById(temp2);
-                    //console.log(temp);
                     temp = parseInt(temp.innerText);
-                    //console.log(temp);
                     totalPrize += temp;
 
                     let productTotal = document.getElementById("productTotal");
@@ -142,9 +141,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let test = document.getElementById("productTotal").innerText;
             test = test.split("$", 10);
             test = test[1];
-            //console.log(test);
             let totalPrize = test;
-            //console.log(totalPrize);
 
             let mamboJumbo = document.getElementsByClassName(id);
             mamboJumbo = mamboJumbo[0].innerHTML;
@@ -152,33 +149,51 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //console.log(mamboJumbo[0].innerHTML);
             let productTotal = document.getElementById("productTotal");
             productTotal.innerText = "Your Products costs: $" + (totalPrize - mamboJumbo);
+            this.calculateShipping(shippingTwo);
+            this.calculateTotal();
         }
 
         calculateShipping(shippingTwo) {
 
             let shippingCost = document.getElementById("shipping");
 
+            let test = document.getElementById("productTotal").innerText;
+            test = test.split("$", 10);
+            test = parseInt(test[1]);
+
             if (shippingTwo <= 0) {
                 shippingTwo = 0.25;
-                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+                shippingAmount = shippingTwo * test;
+                shippingCost.innerText = "+ " + (shippingTwo * 100) + "%: $" + shippingAmount.toFixed(2);
             } else if (shippingTwo > 0 && shippingTwo < 15) {
                 shippingTwo = 0.20;
-                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+                shippingAmount = shippingTwo * test;
+                shippingCost.innerText = "+ " + (shippingTwo * 100) + "%: $" + shippingAmount.toFixed(2);
             } else if (shippingTwo >= 15 && shippingTwo < 25) {
                 shippingTwo = 0.15;
-                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+                shippingAmount = shippingTwo * test;
+                shippingCost.innerText = "+ " + (shippingTwo * 100) + "%: $" + shippingAmount.toFixed(2);
             } else if (shippingTwo >= 25 && shippingTwo < 35) {
                 shippingTwo = 0.3;
-                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+                shippingAmount = shippingTwo * test;
+                shippingCost.innerText = "+ " + (shippingTwo * 100) + "%: $" + shippingAmount.toFixed(2);
             } else {
                 console.log("No Shipping Available!");
             }
         }
+
+
+        calculateTotal() {
+
+            let test = document.getElementById("productTotal").innerText;
+            test = test.split("$", 10);
+            test = parseInt(test[1]);
+
+            let total = document.getElementById("total");
+            total.innerText = "Your Total: $" + (test + shippingAmount).toFixed(2);
+
+        }
     }
-
-    //calculateTotal() {
-
-    //}
 
 
     let xar = new weatherApi();
