@@ -1,16 +1,16 @@
 .navFooter-darkmode{
-    background-color: green !important;
+    background-color: #e2ae6c !important;
 }
 .main-darkmode{
-    background-color: darkgreen  !important;
+    background-color: #a37c82  !important;
 }
 .body-darkmode{
-    background-color: cyan  !important;
+    background-color: #6e304b  !important;
 }
 .items-darkmode{
     background-color: green  !important;
 }
 
 .h1-darkmode{
-    background-color: red;
+    color: red;
 }

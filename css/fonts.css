@@ -40,12 +40,6 @@ p{
     font-size: large;
 }
 
-.signupin_tab-group {
-    font-family: Gadugi;
-    text-align: center;
-    position: relative;
-    padding: 2em;
-}
 a {
     decoration: none;
 }
@@ -55,6 +49,9 @@ td{
 th{
     font-family: Arial;
     font-size: x-large;
+}
+#cartTotal{
+    background-color: #aacfe2;
 }
 #weatherCondition{
     font-size: xx-large;
