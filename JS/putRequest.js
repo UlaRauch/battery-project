@@ -35,4 +35,6 @@ class putRequest{
             alert("not enough pieces of " + Product.ProductName);
         }
     }
+
+
 }

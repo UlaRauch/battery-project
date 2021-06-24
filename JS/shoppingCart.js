@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     let number = 0;
 
+    let shipping = 0;
+
+    let shippingTwo = 0;
+
     class ShoppingCart {
 
 
@@ -73,15 +77,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         deleteFromTable(product) {
             let x = document.getElementById(product.ProductID);
-            xar.calculateAfterDelete("tot"+product.ProductID);
+            xar.calculateAfterDelete("tot" + product.ProductID);
             localStorage.removeItem(product.ProductID);
             x.remove();
         }
 
     }
-
-
-
 
 
     //WEATHER API!!!!!!!!!!
@@ -100,42 +101,46 @@ document.addEventListener("DOMContentLoaded", function (event) {
             const data = await response.json();
 
             let temp = document.getElementById("temp");
+            shipping = parseInt(`${Math.round(data.main.temp) - 273}`);
+            shippingTwo = parseInt(`${Math.round(data.main.temp) - 273}`);
             temp.innerText = `${Math.round(data.main.temp) - 273}°C`;
             let weatherConditions = document.getElementById("weatherCondition");
             weatherConditions.innerText = data.weather[0].main;
 
-            this.calculateTotal();
+            console.log(shippingTwo);
+            this.calculateShipping(shippingTwo);
+            this.calculateProductTotal();
             return data;
         }
 
-        calculateTotal() {
+        calculateProductTotal() {
             let totalPrize = 0;
             let arrayOfKeys = Object.keys(localStorage);
 
             // neue schleife damit objekte mit null nicht rein geladen werden
             for (let i = 0; i < arrayOfKeys.length; i++) {
-                try{
-                        let temp2 = "total" + i;
-                        //let temp = document.getElementById("total" + i);
-                        let temp = document.getElementById(temp2);
-                        //console.log(temp);
-                        temp = parseInt(temp.innerText);
-                        //console.log(temp);
-                        totalPrize += temp;
+                try {
+                    let temp2 = "total" + i;
+                    //let temp = document.getElementById("total" + i);
+                    let temp = document.getElementById(temp2);
+                    //console.log(temp);
+                    temp = parseInt(temp.innerText);
+                    //console.log(temp);
+                    totalPrize += temp;
 
-                    let yourTotal = document.getElementById("yourTotal");
-                    yourTotal.innerText = "Your total: $" + totalPrize;
-                }catch(ex){
+                    let productTotal = document.getElementById("productTotal");
+                    productTotal.innerText = "Your Products cost: $" + totalPrize;
+
+                } catch (ex) {
                     console.log("Errorhandling: " + ex);
                 }
-
-                }
+            }
         }
 
-        calculateAfterDelete(id){
+        calculateAfterDelete(id) {
             console.log(id);
-            let test = document.getElementById("yourTotal").innerText;
-            test = test.split("$",10);
+            let test = document.getElementById("productTotal").innerText;
+            test = test.split("$", 10);
             test = test[1];
             //console.log(test);
             let totalPrize = test;
@@ -145,12 +150,36 @@ document.addEventListener("DOMContentLoaded", function (event) {
             mamboJumbo = mamboJumbo[0].innerHTML;
             mamboJumbo = parseInt(mamboJumbo);
             //console.log(mamboJumbo[0].innerHTML);
-            let yourTotal = document.getElementById("yourTotal");
-            yourTotal.innerText = "Your total: $" + (totalPrize - mamboJumbo);
+            let productTotal = document.getElementById("productTotal");
+            productTotal.innerText = "Your Products costs: $" + (totalPrize - mamboJumbo);
         }
 
+        calculateShipping(shippingTwo) {
 
+            let shippingCost = document.getElementById("shipping");
+
+            if (shippingTwo <= 0) {
+                shippingTwo = 0.25;
+                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+            } else if (shippingTwo > 0 && shippingTwo < 15) {
+                shippingTwo = 0.20;
+                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+            } else if (shippingTwo >= 15 && shippingTwo < 25) {
+                shippingTwo = 0.15;
+                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+            } else if (shippingTwo >= 25 && shippingTwo < 35) {
+                shippingTwo = 0.3;
+                shippingCost.innerText =  "+ " + (shippingTwo * 100) + "%";
+            } else {
+                console.log("No Shipping Available!");
+            }
+        }
     }
+
+    //calculateTotal() {
+
+    //}
+
 
     let xar = new weatherApi();
 

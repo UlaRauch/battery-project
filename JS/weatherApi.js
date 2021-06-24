@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 console.log(temp);
                 totalPrize+= temp;
             }
-            let yourTotal = document.getElementById("yourTotal");
+            let yourTotal = document.getElementById("productTotal");
             yourTotal.innerText = "Your total: $" + totalPrize;
         }
     }
