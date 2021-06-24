@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-
     class Product {
         constructor(ProductName, ProductPrice, ProductCover, ProductDescription, ProductID, ProductStockQuantity) {
             this.ProductName = ProductName;
@@ -113,17 +112,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let totalPrize = 0;
             let arrayOfKeys = Object.keys(localStorage);
 
+            // neue schleife damit objekte mit null nicht rein geladen werden
             for (let i = 0; i < arrayOfKeys.length; i++) {
-                let temp2 = "total" + i;
-                //let temp = document.getElementById("total" + i);
-                let temp = document.getElementById(temp2);
-                //console.log(temp);
-                temp = parseInt(temp.innerText);
-                //console.log(temp);
-                totalPrize += temp;
-            }
-            let yourTotal = document.getElementById("yourTotal");
-            yourTotal.innerText = "Your total: $" + totalPrize;
+                if(document.getElementById("total"+i).innerText !== null){
+                    let temp2 = "total" + i;
+                    //let temp = document.getElementById("total" + i);
+                    let temp = document.getElementById(temp2);
+                    //console.log(temp);
+                    temp = parseInt(temp.innerText);
+                    //console.log(temp);
+                    totalPrize += temp;
+                }
+                let yourTotal = document.getElementById("yourTotal");
+                yourTotal.innerText = "Your total: $" + totalPrize;
+                }
         }
 
         calculateAfterDelete(id){
@@ -131,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let test = document.getElementById("yourTotal").innerText;
             test = test.split("$",10);
             test = test[1];
-            console.log(test);
+            //console.log(test);
             let totalPrize = test;
             //console.log(totalPrize);
 
