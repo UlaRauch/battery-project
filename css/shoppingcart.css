@@ -95,6 +95,7 @@ button:hover {
     box-shadow: 0 12px 16px 0 grey, 0 17px 50px 0 grey;
 }
 
+
 @media screen and (max-width: 1024px) {
     #cartTable {
         margin-left: 8%;
@@ -130,11 +131,13 @@ button:hover {
     }
 
 }
+
 @media screen and (max-width: 768px) {
     #cartTable{
         margin-left: 7%;
     }
 }
+
 @media screen and (max-width: 540px) {
     section {
         height: 100vh;
@@ -164,6 +167,7 @@ button:hover {
     }
 
 }
+
 @media screen and (max-width: 411px) {
     #cartTable{
         border: 0;
@@ -193,6 +197,7 @@ button:hover {
     }
 
 }
+
 @media screen and (max-width: 414px) {
     h1{
         padding: 0.5% 0.5% 5% 0.5%;
@@ -237,33 +242,38 @@ button:hover {
         margin-right: 10%;
     }
 }
+
 @media screen and (max-width: 375px) {
     article > h1{
         font-size: 4em;
     }
     #cartTable{
-        margin: 1.5%;
+        margin: 2.5%;
         border:0;
     }
     #firstCol{
         display: none;
     }
     #secondCol{
-        font-size: 3vh;
+        font-size: 2.5vh;
     }
     #thirdCol {
-        font-size: 3vh;
+        font-size: 2.5vh;
     }
     #fourthCol{
          display: none;
      }
     #fifthCol {
-        font-size: 3.5vh;
-    }
-    #sixthCol {
         font-size: 3vh;
     }
+    #sixthCol {
+        font-size: 2.5vh;
+    }
+    tr>td{
+        font-size: small;
+    }
 }
+
 @media screen and (max-width: 320px) {
     article > h1{
         font-size: 3em;
