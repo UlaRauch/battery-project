@@ -4,10 +4,9 @@
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
 }*/
 
-/* *, *:before, *:after {
+/**, *:before, *:after {
     box-sizing: border-box;
 }*/
-
 
 /*temporäre klasse, bis background gelöst ist - entfernen, wenn nicht mehr gebraucht*/
 
@@ -81,6 +80,11 @@ input, textarea {
     position: relative;
     margin-bottom: 40px;
 }
+#contact{
+
+    position: relative;
+    margin-bottom: 40px;
+}
 
 .submitbutton {
     background-color: teal;
@@ -92,8 +96,6 @@ input, textarea {
     margin-left: 2%;
     font-size: 2em;
     transition: all .5s ease;
-
-    box-sizing: border-box;
 }
 
 
@@ -120,10 +122,17 @@ input, textarea {
 
     margin: 0;
 }
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1240px){
     .signupinform{
-        margin-left: 12%;
+        margin: 4% 0 0 20%;
     }
+
+}
+@media screen and (max-width: 1060px){
+    .signupinform{
+        margin: 4% 0 0 15%;
+    }
+
 }
 @media screen and (max-width: 1024px) {
     .signupinform {

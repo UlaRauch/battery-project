@@ -75,14 +75,52 @@ footer > p {
     height: 3.5em;
 }
 
-
-audio{
-    float: right;
-    margin-right: 2%;
-    margin-top: 1%;
+@media screen and (max-width: 1240px) {
+    #mainIcon{
+        padding-top: 0.2em;
+        width: 9%;
+    }
+    #teamIcon{
+         padding-left: 0.4em;
+         padding-top: 0.3em;
+         width: 10%;
+         float: left;
+    }
+    #signIcon{
+          width: 11%;
+        padding: 0.1% 2% 0 0;
+    }
+    #shopIcon{
+        width: 12%;
+        padding-right: 0.8em;
+    }
+    #shoppingcartIcon{
+        padding-right: 1.5em;
+        padding-top: 0.1em;
+        width: 11%;
+    }
 }
+@media screen and (max-width: 1100px) {
+    #mainIcon{
+        width: 10%;
+    }
+    #teamIcon{
+        width: 11%;
+    }
 
+    #signIcon{
+        width: 12%;
+    }
+    #shopIcon{
+        width: 13%;
+    }
+    #shoppingcartIcon{
+        padding-right: 1.5em;
+        padding-top: 0.1em;
+        width: 14%;
+    }
 
+}
 
 @media screen and (max-width: 1030px) {
     #mainIcon{
@@ -91,14 +129,10 @@ audio{
         width: 9.5%;
     }
     #teamIcon{
-        padding-left: 0.4em;
-        padding-top: 0.3em;
         width: 10%;
-        float: left;
     }
     #signIcon{
         width: 11.5%;
-        padding: 0.1% 2% 0 0;
     }
     #shopIcon{
         width: 11.5%;
@@ -108,13 +142,6 @@ audio{
         padding-right: 1.5em;
         padding-top: 0.1em;
         width: 12%;
-    }
-
-
-
-
-    audio{
-        margin-left: 20%;
     }
 
 }
