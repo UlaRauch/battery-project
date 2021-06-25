@@ -75,8 +75,6 @@ tr>td{
 }
 
 #productTotal {
-
-    text-align: center;
     margin: 0;
 }
 
@@ -99,7 +97,7 @@ button:hover {
 @media screen and (max-width: 1024px) {
 
     #productsInCart{
-        height: 66vh;
+        height: 57vh;
     }
     #weatherApi{
         height: 25vh;
@@ -140,7 +138,7 @@ button:hover {
         padding-top: 5%;
     }
     #orderButton {
-        margin-top: 14.4%;
+        margin-top: 11.4%;
         margin-left: 10%;
     }
     #cartTotal p{
@@ -153,11 +151,11 @@ button:hover {
         margin-left: 5%;
     }
     #productsInCart{
-        height: 55vh;
+        height: 71vh;
     }
     #cartTotal{
         margin-left: 8%;
-        height: 7%;
+        height: 16%;
         width: 40%;
     }
     #productTotal{
@@ -165,7 +163,7 @@ button:hover {
     }
     #orderButton{
         float: left;
-        margin-top: 10%;
+        margin-top: 12%;
         margin-right: 0;
      }
 
@@ -190,7 +188,7 @@ button:hover {
         height: 100vh;
     }
     #productsInCart{
-        height: 87vh;
+        height: 115vh;
     }
     #cartTable{
         margin-left: 5.5%;
@@ -203,13 +201,12 @@ button:hover {
     }
 
     #cartTotal {
-        margin: 4% 0 0 18%;
-        padding: 0;
-        height: 7%;
-        width: 55%;
+        margin: 4% 0 0 5%;
+        padding-left: 3%;
+        height: 15%;
+        width: 63%;
     }
     #productTotal{
-        text-align: center;
         padding-top: 3%;
     }
     #orderButton{
@@ -233,7 +230,7 @@ button:hover {
 
 @media screen and (max-width: 414px) {
     #productsInCart{
-        height: 91vh;
+        height: 102vh;
     }
     h1{
         padding: 0.5% 0.5% 5% 0.5%;
@@ -270,13 +267,14 @@ button:hover {
     }
 
     #cartTotal{
-        height: 8%;
+        height: 17%;
         width: 80%;
-        margin-left: 8%;
+        margin-left: 5%;
+        padding-left: 2%;
         margin-top: 7%;
     }
     #orderButton{
-        margin-top: 12%;
+        margin-top: 8%;
         margin-right: 10%;
         padding: 2%;
         font-size: 100%;
@@ -304,6 +302,9 @@ button:hover {
 }
 
 @media screen and (max-width: 375px) {
+    #productsInCart{
+        height: 110vh;
+    }
     article > h1{
         font-size: 4em;
     }
@@ -333,7 +334,7 @@ button:hover {
         font-size: small;
     }
     #weatherApi{
-        height: 52vh;
+        height: 45vh;
     }
     #weatherCondition{
         margin-top: 14%;
@@ -342,7 +343,7 @@ button:hover {
 
 @media screen and (max-width: 320px) {
     #productsInCart{
-        height: 86vh;
+        height: 101vh;
     }
     article > h1{
         font-size: 3em;
@@ -375,10 +376,11 @@ button:hover {
         font-size: 2.5vh;
     }
     #cartTotal{
-         height: 8%;
-         width: 90%;
-         margin-left: 3%;
-         margin-top: 10%;
+        height: 20%;
+        width: 90%;
+        padding-right: 0;
+        margin-left: 2%;
+        margin-top: 10%;
      }
     #orderButton{
         margin-top: 12%;
