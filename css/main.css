@@ -16,9 +16,9 @@ article{
     height: 75vh;
     width: 100%;
 }
-.test{
+/*.test{
     background-color: red;
-}
+}*/
 article > p {
     margin:0;
 }
@@ -36,27 +36,12 @@ article > p {
     width: 48%;
     float: left;
 }
-#tl1 th>h1{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    max-height: 85%;
-    height: auto;
-}
 
 #tl2{
     width: 48%;
     float: right;
 }
 
-#tl2 th>h1{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    max-height: 85%;
-    height: auto;
-
-}
 td>h2{
     padding-left: 50%;
 }
