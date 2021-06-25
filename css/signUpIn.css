@@ -11,15 +11,6 @@
 
 /*temporäre klasse, bis background gelöst ist - entfernen, wenn nicht mehr gebraucht*/
 
-main>p {
-    text-align: center;
-}
-
-.signupinform {
-    padding: 40px;
-    max-width: 600px;
-    margin: 4% 0 0 37%;
-}
 /*
 .signupin_tab-group {
     list-style: none;
@@ -62,6 +53,7 @@ main>p {
     text-align: center;
 }
 
+
 .signupinform {
     padding: 40px;
     max-width: 600px;
@@ -100,6 +92,8 @@ input, textarea {
     margin-left: 2%;
     font-size: 2em;
     transition: all .5s ease;
+
+    box-sizing: border-box;
 }
 
 
@@ -126,7 +120,11 @@ input, textarea {
 
     margin: 0;
 }
-
+@media screen and (max-width: 1060px) {
+    .signupinform{
+        margin-left: 12%;
+    }
+}
 @media screen and (max-width: 1024px) {
     .signupinform {
         margin-top: 8%;
