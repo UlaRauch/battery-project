@@ -87,8 +87,6 @@
             let cartTotal = document.getElementById("cartTotal");
             cartTotal.className = "navFooter-lightmode";
             cartTotal.classList.remove("navFooter-darkmode");
-
-
         }catch{
 
         }
