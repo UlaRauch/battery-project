@@ -1,6 +1,7 @@
 class putRequest{
 
 
+
     // Diese funktion am ende hinzufügen und durchlaufen lassen
     sendPutRequest(Product, Quantity){
         if((Product.ProductStockQuantity - Quantity > 0)){

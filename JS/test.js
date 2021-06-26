@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("hallo");
-
+/*
     try{
         let button2 = document.getElementById("orderButton");
         button2.addEventListener("click", function (){
@@ -14,5 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     }
 
+ */
 });
+
 

@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let shippingTwo = 0;
 
     let shippingAmount = 0;
+    let test = [];
 
     class ShoppingCart {
 
@@ -195,8 +196,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
+    class Test{
+        sendPutRequest(Product, Quantity){
+            if((Product.ProductStockQuantity - Quantity > 0)){
+                const product = {
+                    "ProductName": Product.ProductName,
+                    "ProductPrice": Product.ProductPrice,
+                    "ProductCover": Product.ProductCover,
+                    "ProductDescription": Product.ProductDescription,
+                    "ProductID": Product.ProductID,
+                    "ProductStockQuantity": (Product.ProductStockQuantity - Quantity)
+                }
+
+                const id = Product.ProductID
+                //const change = select.options[select.selectedIndex].value;
+                const data = {id, product};
+
+                fetch("http://localhost:1337/api/v1/products/" + Product.ProductID,{
+                    method: 'Put',
+                    headers:{
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(product),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+            }else{
+                alert("not enough pieces of " + Product.ProductName);
+            }
+        }
+    }
+
+
+
+
 
     let xar = new weatherApi();
+    let tst = new Test();
 
     const shopCart = new ShoppingCart();
     xar.getCurrent("Vienna");
@@ -210,9 +251,36 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 res.json()
                     .then(function (json) {
                         shopCart.shoppingCartTable(json);
+
                     })
             })
     }
+
+    let button2 = document.getElementById("orderButton");
+    button2.addEventListener("click", function (){
+
+        let arrayOfKeys = Object.keys(localStorage);
+        let arrayOfValues = Object.values(localStorage);
+
+        for (let i = 0; i < arrayOfKeys.length; i++) {
+            fetch("http://localhost:1337/api/v1/products/" + arrayOfKeys[i])
+                .then(function (res) {
+                    res.json()
+                        .then(function (json) {
+                            tst.sendPutRequest(json, arrayOfValues[i]);
+                        })
+                })
+        }
+
+        window.open ("http://localhost:1337/checkout",
+            "mywindow","menubar=1,resizable=1,width=800,height=600");
+
+
+
+
+
+
+    })
 });
 
 
