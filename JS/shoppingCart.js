@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
 
         window.open ("http://localhost:1337/checkout",
-            "mywindow","menubar=1,resizable=1,width=800,height=600");
+            "mywindow","menubar=1,resizable=1,width=800,height=1000");
 
 
 
