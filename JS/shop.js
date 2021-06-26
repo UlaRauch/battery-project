@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             productID++;
 
             window.addEventListener('scroll', function(){
-                if(window.scrollY >= document.getElementById("productShop").clientHeight - window.innerHeight -10 && productID <= maxProductsPerPage){
+                // damit beim scrollen geladen wird
+                if(window.scrollY >= document.getElementById("productShop").clientHeight - window.innerHeight -10 && productID <= maxProductsPerPage){ // max 20 produkte
                     loadNewProduct(productID);
                     productID++;
                     console.log(productID);
@@ -96,14 +97,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                     Product.ProductStockQuantity += Number(select.options[select.selectedIndex].value);
                     //localStorage.clear();
-                    if(localStorage.getItem(Product.ProductID)){
-                        let valueOfSelect = select.options[select.selectedIndex].value;
-                        valueOfSelect = parseInt(valueOfSelect);
-                        let ValueOfLocalstorage = localStorage.getItem(Product.ProductID);
+                    if(localStorage.getItem(Product.ProductID)){// wenn prokut schon drinnen is soll raufzaehlen
+                        let valueOfSelect = select.options[select.selectedIndex].value; // hole zuerst was ich ausgewaehlt habe
+                        valueOfSelect = parseInt(valueOfSelect);// string zu int
+                        let ValueOfLocalstorage = localStorage.getItem(Product.ProductID);// holen was im local storage ist
                         ValueOfLocalstorage = parseInt(ValueOfLocalstorage);
-                        valueOfSelect = valueOfSelect + ValueOfLocalstorage;
-                        localStorage.setItem(Product.ProductID,valueOfSelect);
-                    }else{
+                        valueOfSelect = valueOfSelect + ValueOfLocalstorage;// zsmrechnen: quantity die ausgewaehlt ist + quantity im local storage
+                        localStorage.setItem(Product.ProductID,valueOfSelect);// // das neue wird gesetzt
+                    }else{ // wenn nicht neu setzen
                         localStorage.setItem(Product.ProductID,select.options[select.selectedIndex].value);
                     }
 
