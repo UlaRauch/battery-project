@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     class weatherApi {
 
-        async getCurrent(input) {
+        async getCurrent(input) //input ist city
+         {
             const myKey = "39a9a737b07b4b703e3d1cd1e231eedc";
 
             //make request to url
@@ -103,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             const data = await response.json();
 
             let temp = document.getElementById("temp");
-            shipping = parseInt(`${Math.round(data.main.temp) - 273}`);
-            shippingTwo = parseInt(`${Math.round(data.main.temp) - 273}`);
+            shipping = parseInt(`${Math.round(data.main.temp) - 273}`); //normale temp als Kelvin
+            shippingTwo = parseInt(`${Math.round(data.main.temp) - 273}`);// calculate shipping
             temp.innerText = `${Math.round(data.main.temp) - 273}°C`;
             let weatherConditions = document.getElementById("weatherCondition");
             weatherConditions.innerText = data.weather[0].main;
@@ -116,20 +117,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
             return data;
         }
 
-        calculateProductTotal() {
+        calculateProductTotal() {//product total ohne shipping
             let totalPrize = 0;
             let arrayOfKeys = Object.keys(localStorage);
 
             // neue schleife damit objekte mit null nicht rein geladen werden
             for (let i = 0; i < arrayOfKeys.length; i++) {
                 try {
-                    let temp2 = "total" + i;
+                    let temp2 = "total" + i; //
                     let temp = document.getElementById(temp2);
-                    temp = parseInt(temp.innerText);
+                    temp = parseInt(temp.innerText);// string zu int preis vom produkt
                     totalPrize += temp;
 
                     let productTotal = document.getElementById("productTotal");
-                    productTotal.innerText = "Your Products cost: $" + totalPrize;
+                    productTotal.innerText = "Your Products cost: $" + totalPrize;// ist productTotal im html
 
                 } catch (ex) {
                     console.log("Errorhandling: " + ex);
@@ -137,24 +138,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         }
 
-        calculateAfterDelete(id) {
+        calculateAfterDelete(id) {//druecken von delete button preis verringern
             console.log(id);
             let test = document.getElementById("productTotal").innerText;
             test = test.split("$", 10);
             test = test[1];
             let totalPrize = test;
 
-            let mamboJumbo = document.getElementsByClassName(id);
+            let mamboJumbo = document.getElementsByClassName(id);// preis den man abzieht
             mamboJumbo = mamboJumbo[0].innerHTML;
             mamboJumbo = parseInt(mamboJumbo);
             //console.log(mamboJumbo[0].innerHTML);
             let productTotal = document.getElementById("productTotal");
-            productTotal.innerText = "Your Products costs: $" + (totalPrize - mamboJumbo);
+            productTotal.innerText = "Your Products costs: $" + (totalPrize - mamboJumbo);//wie altes productTotal - mamboJumbo
             this.calculateShipping(shippingTwo);
             this.calculateTotal();
         }
 
-        calculateShipping(shippingTwo) {
+        calculateShipping(shippingTwo) {// calculate shipping
 
             let shippingCost = document.getElementById("shipping");
 
@@ -163,9 +164,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             test = parseInt(test[1]);
 
             if (shippingTwo <= 0) {
-                shippingTwo = 0.25;
+                shippingTwo = 0.25;// 25% shipping
                 shippingAmount = shippingTwo * test;
-                shippingCost.innerText = "+ " + (shippingTwo * 100) + "%: $" + shippingAmount.toFixed(2);
+                shippingCost.innerText = "+ " + (shippingTwo * 100) + "%: $" + shippingAmount.toFixed(2);//*100=> 25%
             } else if (shippingTwo > 0 && shippingTwo < 15) {
                 shippingTwo = 0.20;
                 shippingAmount = shippingTwo * test;
@@ -184,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
 
 
-        calculateTotal() {
+        calculateTotal() {// total mit shipping
 
             let test = document.getElementById("productTotal").innerText;
             test = test.split("$", 10);
@@ -198,7 +199,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     class Test{
         sendPutRequest(Product, Quantity){
+            //waere auch mit patch gegangen....
+
             if((Product.ProductStockQuantity - Quantity > 0)){
+                //produkt wird erstellt ist kein json
                 const product = {
                     "ProductName": Product.ProductName,
                     "ProductPrice": Product.ProductPrice,
@@ -212,14 +216,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 //const change = select.options[select.selectedIndex].value;
                 const data = {id, product};
 
-                fetch("http://localhost:1337/api/v1/products/" + Product.ProductID,{
+                fetch("http://localhost:1337/api/v1/products/" + Product.ProductID,{// verbindung aufbauen id identifizieren
                     method: 'Put',
                     headers:{
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(product),
+                    body: JSON.stringify(product),// das produkt was ich senden will als json
                 })
-                    .then(response => response.json())
+                    .then(response => response.json())//magic
                     .then(data => {
                         console.log('Success:', data);
                     })
@@ -240,17 +244,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let tst = new Test();
 
     const shopCart = new ShoppingCart();
-    xar.getCurrent("Vienna");
+    xar.getCurrent("Vienna"); // aufgerufen
     //saves localstoarge
-    let arrayOfKeys = Object.keys(localStorage);
+    let arrayOfKeys = Object.keys(localStorage);//keys sind wichtig
     let arrayOfValues = Object.values(localStorage);
 
     for (let i = 0; i < arrayOfKeys.length; i++) {
-        fetch("http://localhost:1337/api/v1/products/" + arrayOfKeys[i])
+        fetch("http://localhost:1337/api/v1/products/" + arrayOfKeys[i])// aus local storage
             .then(function (res) {
                 res.json()
                     .then(function (json) {
-                        shopCart.shoppingCartTable(json);
+                        shopCart.shoppingCartTable(json);// rufe den table auf
 
                     })
             })
@@ -259,25 +263,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let button2 = document.getElementById("orderButton");
     button2.addEventListener("click", function (){
 
-        let arrayOfKeys = Object.keys(localStorage);
-        let arrayOfValues = Object.values(localStorage);
+        //wichtig fuer put
+        let arrayOfKeys = Object.keys(localStorage);//key ist id
+        let arrayOfValues = Object.values(localStorage);// value ist quantity die man einkauft
 
         for (let i = 0; i < arrayOfKeys.length; i++) {
-            fetch("http://localhost:1337/api/v1/products/" + arrayOfKeys[i])
+            fetch("http://localhost:1337/api/v1/products/" + arrayOfKeys[i])// vom server object vom local storage holen
                 .then(function (res) {
                     res.json()
                         .then(function (json) {
-                            tst.sendPutRequest(json, arrayOfValues[i]);
+                            tst.sendPutRequest(json, arrayOfValues[i]);// senden an den server value was im shoppingcart ist
                         })
                 })
         }
 
         window.open ("http://localhost:1337/checkout",
-            "mywindow","menubar=1,resizable=1,width=800,height=1000");
-
-
-
-
+            "mywindow","menubar=1,resizable=1,width=800,height=1000");// fenster oeffnen beim button
 
 
     })
