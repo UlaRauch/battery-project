@@ -145,6 +145,16 @@ button:hover {
         margin: 0;
     }
 }
+@media screen and (max-width: 858px){
+
+    #productsInCart{
+        height: 65vh;
+    }
+    #orderButton{
+        margin-left: 7%;
+    }
+
+}
 
 @media screen and (max-width: 768px) {
     #cartTable{
