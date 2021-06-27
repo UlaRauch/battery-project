@@ -29,14 +29,14 @@
         h1.className = "h1-darkmode";
         h1.classList.remove("h1-lightmode");
 
-        try{
+        try{//cartTotal nur auf einer Seite damit er einfach weiter macht
             let cartTotal = document.getElementById("cartTotal");
             cartTotal.className = "navFooter-darkmode";
             cartTotal.classList.remove("navFooter-lightmode");
         }catch{
 
         }
-        try{
+        try{// alles was unique ist wird im try catch
             let h2 = document.getElementById("h2");
             h2.className = "h2-darkmode";
             h2.classList.remove("h2-lightmode");
