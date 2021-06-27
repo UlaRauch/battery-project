@@ -1,18 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-/*
-    class Product{
-        constructor(ProductName, ProductPrice, ProductCover, ProductDescription, ProductID, ProductStockQuantity) {
-            this.ProductName = ProductName;
-            this.ProductPrice = ProductPrice;
-            this.ProductCover = ProductCover;
-            this.ProductDescription = ProductDescription;
-            this.ProductID = ProductID;
-            this.ProductStockQuantity = ProductStockQuantity;
-        }
-    }
 
 
- */
     class Shop {
         constructor() {
             //this.shoppingCart = new ShoppingCart("Shopping Cart");
@@ -28,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                                 ProductArray.push(json);
                                 shop.addProductToScreen(json);
                                 console.log(json);
+                                console.log(res.json());
+
                             })
                     })
             }
@@ -127,12 +117,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             article3.append(article4);
             article.append(p2);
             productShop.append(article);
-
-
         }
-
-
     }
+
+
     const shop = new Shop();
     let ProductArray = [];
 });

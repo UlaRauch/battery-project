@@ -1,16 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    class Product {
-        constructor(ProductName, ProductPrice, ProductCover, ProductDescription, ProductID, ProductStockQuantity) {
-            this.ProductName = ProductName;
-            this.ProductPrice = ProductPrice;
-            this.ProductCover = ProductCover;
-            this.ProductDescription = ProductDescription;
-            this.ProductID = ProductID;
-            this.ProductStockQuantity = ProductStockQuantity;
-        }
-    }
-
 
     let productNumber = 0;
 
@@ -213,8 +202,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 }
 
                 const id = Product.ProductID
-                //const change = select.options[select.selectedIndex].value;
-                const data = {id, product};
+
 
                 fetch("http://localhost:1337/api/v1/products/" + Product.ProductID,{// verbindung aufbauen id identifizieren
                     method: 'Put',
